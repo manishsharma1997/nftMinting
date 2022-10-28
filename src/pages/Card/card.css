@@ -6,7 +6,25 @@
     background-repeat: no-repeat;
     background-color: rgb(23, 23, 23);
 }
+.cards3{
+    display: flex;
+    margin-left: 150px;
+    
+}
+.cards1{
 
+}
+.cards2{
+    margin-left: 15%;
+}
+.cards3a{
+    margin-left: 15%;
+}
+/* .cards{
+        height: 500.26px;
+        width: 362.83px;
+      
+} */
 .firstpara{
   height: 168px;
   width: 917px;
