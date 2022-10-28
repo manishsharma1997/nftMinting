@@ -1,0 +1,128 @@
+.homesection{
+    padding-top: 180px;
+    background-image: url('../../assets/HomeImages/NFT Mint/homeback.png');
+    background-size: cover;
+    min-height: 800px;
+    background-repeat: no-repeat;
+    background-color: rgb(23, 23, 23);
+}
+.section h1{
+    color: white;
+}
+.firstp{
+    height: 150px;
+    width: 651px;
+    color: #FFFFFF;
+    font-family: MisterVampire;
+    font-size: 49px;
+    letter-spacing: 3.76px;
+    line-height: 75px;
+}
+.p2{
+    height: 36px;
+    width: 342px;
+    color: #D5F70A;
+    font-family: Kartooni;
+    font-size: 40px;
+    letter-spacing: 0.4px;
+    line-height: 36px;
+    padding-top: 20px;
+}
+.mintbtn{
+    height: 58px;
+    width: 154px;
+    border-radius: 10px;
+    background-color: #D5F70A;
+    color: #1D1D23;
+    font-family: Kartooni;
+    font-size: 22px;
+    letter-spacing: 0.22px;
+    line-height: 29px;
+    text-align: center;
+}
+.p3{
+    height: 36px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 24px;
+    letter-spacing: 0.24px;
+    line-height: 36px;
+    justify-content: center;
+    padding: 12px 0px 0px 40px;
+}
+.p4{
+    height: 84px;
+    width: 482px;
+    color: #FFFFFF;
+    font-family: Kartooni;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+.spanp4{
+    color: #D5F70A;
+}
+.bottom1{
+    height: 27px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 24px;
+    letter-spacing: 0.3px;
+    padding: 0;
+    text-align: center;
+}
+.bottom2{
+    height: 27px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    padding-left: 30px;
+}
+.bottom2:nth-child(1){
+    padding: 0 !important;
+}
+.section2{
+    padding-top: 50px;
+    background-color: black;
+    padding-bottom: 50px;
+}
+   .lockimg{
+    width: 30px;
+    height: 30px;
+    margin-top: 9px;
+}
+.lockp1{
+    padding-left: 26px;
+    height: 42px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    padding-top: 10px;
+}
+.lockp2{
+    height: 56px;
+    width: 370px;
+    color: #BDBDBD;
+    font-family: Kartooni;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 28px;
+    margin-left: -60px;
+}
+
+.fast_transaction_div{
+    margin-left: 60px;
+}
+
+.lockp4{
+    height: 56px;
+    width: 400px;
+    color: #BDBDBD;
+    font-family: Kartooni;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 28px;
+    margin-left: 60px;
+}

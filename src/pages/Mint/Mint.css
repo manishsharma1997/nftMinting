@@ -1,0 +1,189 @@
+
+.how-to-mint {
+    height: 75px;
+    width: 651px;
+    color: #FFFFFF;
+    font-family: MisterVampire;
+    font-size: 49px;
+    letter-spacing: 3.76px;
+    line-height: 75px;
+  }
+
+  .mintsection{
+    background-image: url('../../assets/HomeImages/NFT Mint/Mask.png');
+    height: 100%;
+  }
+
+  .aftermint{
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .connect_wallet{
+    display: flex;
+    color: white;
+  }
+  .one{
+    height: 75px;
+    width: 33px;
+    color: #CC4B8B;
+    font-family: MisterVampire;
+    font-size: 49px;
+    letter-spacing: 3.76px;
+    line-height: 75px;
+  }
+  .two{
+    height: 75px;
+    width: 38px;
+    color: #D5F70A;
+    font-family: MisterVampire;
+    font-size: 49px;
+    letter-spacing: 3.76px;
+    line-height: 75px;
+  }
+  .three{
+    height: 75px;
+    width: 37px;
+    color: #D84646;
+    font-family: MisterVampire;
+    font-size: 49px;
+    letter-spacing: 3.76px;
+    line-height: 75px;
+  }
+  .four{
+    height: 75px;
+    width: 41px;
+    color: #CCBA4B;
+    font-family: MisterVampire;
+    font-size: 49px;
+    letter-spacing: 3.76px;
+    line-height: 75px;
+  }
+
+  .connect_your_wallet{
+    height: 84px;
+    width: 202px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    line-height: 42px;
+  }
+  .select_your_quantity{
+    height: 84px;
+    width: 202px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    line-height: 42px;
+  }
+  .confirm-the-transaction{
+    height: 84px;
+    width: 202px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    line-height: 42px;
+  }
+  .receive_your_nfts{
+    height: 84px;
+    width: 202px;
+    color: #F3F3F3;
+    font-family: Kartooni;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    line-height: 42px;
+  }
+
+  .numbers{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 20px;
+  }
+
+  .alphabets{
+    margin-top: 10px;
+    margin-right: 50px;
+  }
+
+  .pattern_pic{
+    height: 772.59px;
+    width: 772.59px;
+  }
+  
+  .section_about{
+    display: flex;
+  }
+
+  .data_section{
+    margin-top: 115px;
+  }
+
+  .about_us{
+  height: 75px;
+  width: 291px;
+  color: #FFFFFF;
+  font-family: MisterVampire;
+  font-size: 49px;
+  letter-spacing: 3.76px;
+  line-height: 75px;
+  }
+
+  .contrary_to_popular{
+  height: 504px;
+  width: 589px;
+  color: #F3F3F3;
+  font-family: Kartooni;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+  line-height: 42px;
+  }
+.pattern_pic{
+  background-image: url('../../assets/HomeImages/NFT Mint/Pattern Copy@2x.png');
+}
+
+.cards{
+  margin-left: -115px;
+}
+
+.card1_pic{
+    height: 253.21px;
+    width: 253.21px;
+    border-radius: 10.91px;
+  
+}
+.layer-dimensions{
+  color: white;
+}
+.timer-line{
+  font-size: 1.4rem;
+}
+.timer-value{
+  font-size: 1.2rem;
+}
+.timer-color{height: 19.65px;
+  font-size: 1.4rem;
+  margin-left: 20%;
+  display: flex;
+  margin-top: 7%;
+  width: 249.97px;
+  color: rgba(238,238,238,0.7);
+  font-family: Roboto;
+  font-size: 13.1px;
+  font-weight: 500;
+  letter-spacing: 0.13px;
+  line-height: 17px;
+}
+
+  .card1{
+    height: 397.28px;
+    width: 302.7px;
+    box-shadow: 48.33px 48.33px 96.66px 0 #000000;
+  border: 1px solid red;
+  border-radius: 3%;
+margin-top: 187px;
+margin-left: 248px;
+margin-right: 221px;
+margin-bottom: 187px;}

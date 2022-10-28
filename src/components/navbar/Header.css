@@ -1,0 +1,39 @@
+.section{
+    padding-top: 20px;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+.ul{
+    margin-left: auto;
+}
+.navbar li{
+    height: 20px;
+    width: 124px;
+    color: #ffff !important;
+    font-family: "Kartooni";
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+}
+.navbar-brand{
+    color: #ffff !important;
+    letter-spacing: 4px;
+}
+.nav-link{
+    letter-spacing: 4px;
+    color: #ffff !important;
+}
+.navbar li :nth-child(1){
+    list-style: none;
+}
+.contactUs{
+    border-right: 2px solid gray;
+}
+.navlogo{
+    height: 33.64px;
+    width: 35.15px;
+    transform: rotate(-8.57deg);
+}
