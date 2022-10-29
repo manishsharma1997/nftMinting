@@ -3,6 +3,7 @@ import Navbar from './components/navbar'
 import Home from '../src/pages/Home'
 import Mint from '../src/pages/Mint'
 import Card from '../src/pages/Card';
+import Subscribe from '../src/pages/Subscribe';
 function App() {
   return (
     <>
@@ -10,6 +11,7 @@ function App() {
     <Home/>
     <Mint/>
     <Card />
+    <Subscribe/>
     </>
   )
 }

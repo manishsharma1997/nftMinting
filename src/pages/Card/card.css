@@ -11,7 +11,14 @@
     margin-left: 150px;
     
 }
-
+.time{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img{
+    padding: 33px !important;
+}
 .cards2{
     margin-left: 15%;
 }

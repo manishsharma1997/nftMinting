@@ -37,3 +37,25 @@
     width: 35.15px;
     transform: rotate(-8.57deg);
 }
+.nab{
+    display: flex;
+}
+.ull{
+    display: flex;
+    gap: 71px;
+    list-style: none;
+    text-align: center;
+    margin: auto;
+    font-size: larger;
+    font-weight: 800;
+}
+.pp{
+    color: rgb(35, 35, 35);
+    font-size: 18px;
+    padding-left: 40px;
+}
+.delete{
+    color: white;
+    background-color: red;
+    padding: 5px 25px 5px 25px;
+}
