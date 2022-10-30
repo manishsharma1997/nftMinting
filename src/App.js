@@ -4,6 +4,8 @@ import Home from '../src/pages/Home'
 import Mint from '../src/pages/Mint'
 import Card from '../src/pages/Card';
 import Subscribe from '../src/pages/Subscribe';
+import Roadmap from './pages/roadmap';
+import Footer from './components/footer'
 function App() {
   return (
     <>
@@ -11,7 +13,9 @@ function App() {
     <Home/>
     <Mint/>
     <Card />
+    <Roadmap/>
     <Subscribe/>
+    <Footer/>
     </>
   )
 }

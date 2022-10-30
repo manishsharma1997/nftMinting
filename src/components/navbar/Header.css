@@ -32,11 +32,11 @@
 .contactUs{
     border-right: 2px solid gray;
 }
-.navlogo{
+/* .navlogo{
     height: 33.64px;
     width: 35.15px;
     transform: rotate(-8.57deg);
-}
+} */
 .nab{
     display: flex;
 }
@@ -49,6 +49,9 @@
     font-size: larger;
     font-weight: 800;
 }
+.ull li{
+    cursor: pointer;
+}
 .pp{
     color: rgb(35, 35, 35);
     font-size: 18px;
@@ -58,4 +61,12 @@
     color: white;
     background-color: red;
     padding: 5px 25px 5px 25px;
+}
+.formline1{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.formline1 input{
+    width: 262px;
 }

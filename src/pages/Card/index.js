@@ -12,7 +12,7 @@ import timeImage from '../../assets/HomeImages/NFT Mint/TimeCircle.png'
 function card() {
     return (
         <>
-            <section className="homesection">
+            <section className="homesection" id='collection'>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-7">
@@ -22,7 +22,7 @@ function card() {
                         </div>
                         <div className='cards3'>
                             <div className='cards1'>
-                            <Card style={{ width: '18rem',background: '#353535' }} className='cards'>
+                            <Card style={{ background: '#353535' }} className='cards'>
                                 <Card.Img style={{padding:'33px'}} variant="top" src={card1img} />
                                 <Card.Body style={{marginTop:'-32px'}}>
                                     <div className='time'><div><img src={timeImage}/><span style={{color:'white'}}>11h:03m:01s</span></div><div><img src={eyeImage}/><span style={{color:'white'}}>100</span></div></div>
@@ -37,7 +37,7 @@ function card() {
                             </Card>
                         </div>
                         <div className='cards2'>
-                        <Card style={{ width: '18rem',background: '#353535' }} className='cards'>
+                        <Card style={{ background: '#353535' }} className='cards'>
                                 <Card.Img style={{padding:'33px'}} variant="top" src={card2img} />
                                 <Card.Body style={{marginTop:'-32px'}}>
                                     <div className='time'><div><img src={timeImage}/><span style={{color:'white'}}>11h:03m:01s</span></div><div><img src={eyeImage}/><span style={{color:'white'}}>100</span></div></div>
@@ -52,7 +52,7 @@ function card() {
                             </Card>
                         </div>
                         <div className='cards3a'>
-                        <Card style={{ width: '18rem',background: '#353535' }} className='cards'>
+                        <Card style={{ background: '#353535' }} className='cards'>
                                 <Card.Img style={{padding:'33px'}} variant="top" src={card3img} />
                                 <Card.Body style={{marginTop:'-32px'}}>
                                     <div className='time'><div><img src={timeImage}/><span style={{color:'white'}}>11h:03m:01s</span></div><div><img src={eyeImage}/><span style={{color:'white'}}>100</span></div></div>

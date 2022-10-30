@@ -145,7 +145,7 @@
 }
 
 .cards{
-  margin-left: -115px;
+  margin-left: -63px;
 }
 
 .card1_pic{
@@ -181,9 +181,17 @@
     height: 397.28px;
     width: 302.7px;
     box-shadow: 48.33px 48.33px 96.66px 0 #000000;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 3%;
 margin-top: 187px;
 margin-left: 248px;
 margin-right: 221px;
 margin-bottom: 187px;}
+.card123{
+  position: absolute;
+  left: 359px;
+  margin-top: 84px;
+}
+.card1234{
+  position: relative;
+}

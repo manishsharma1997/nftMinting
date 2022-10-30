@@ -7,7 +7,7 @@ import vector from '../../assets/HomeImages/NFT Mint/Group 9 Copy.png'
 const index = () => {
         return (
                 <>
-                        <section className='homesection'>
+                        <section className='homesection' id='home'>
                                 <div className='container'>
                                         <div className='row'>
                                                 <div className='col-lg-7'>

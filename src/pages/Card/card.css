@@ -5,10 +5,11 @@
     min-height: 800px;
     background-repeat: no-repeat;
     background-color: rgb(23, 23, 23);
+    padding-bottom: 50px;
 }
 .cards3{
     display: flex;
-    margin-left: 150px;
+    margin-left: 48px;
     
 }
 .time{
@@ -38,4 +39,7 @@
   font-size: 48px;
   letter-spacing: 0.48px;
   line-height: 84px
+}
+.cards{
+    border-radius: 15px;
 }

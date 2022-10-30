@@ -1,0 +1,312 @@
+.section {
+    padding-top: 70px;
+    padding-bottom: 75px;
+    background-color: black;
+    /* background-image: url(../../../public/HomeAssests/roadmapbackground.png); */
+    background-attachment: fixed;
+    min-height: 1200px;
+  }
+  .heading {
+    color: #ffffff;
+    font-family: "MisterVampire";
+    font-size: 52px;
+    letter-spacing: 0;
+    line-height: 126px;
+    position: relative;
+  }
+  
+  .imagediv {
+    display: flex;
+    justify-content: center;
+  }
+  .image1 {
+    width: 250px;
+  }
+  
+  .heading2div {
+    margin: 0 80px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    height: 50px;
+    transform: scaleX(-1);
+    border-radius: 7px;
+    background: linear-gradient(90deg, #e3d454 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .heading2 {
+    font-family: Kartooni;
+    padding-top: 7px;
+    width: 112px;
+    transform: scaleX(-1);
+    color: white;
+    font-weight: 400;
+    margin-right: 15px;
+    font-size: 22px;
+  }
+  
+  .heading2paragraph {
+    width: 405px;
+    color: #ffffff;
+    font-family: Kartooni;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 30px;
+  }
+  .section ul{
+    padding: 0 0 0 15px;
+  }
+  .secondrow {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .secondheading2paragraph {
+    margin-right: 80px;
+    height: 259px;
+    width: 318px;
+    color: #ffffff;
+    font-family: Kartooni;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-align: right;
+  }
+  .image2 {
+    justify-content: center;
+    display: flex;
+    float: right;
+    width: 60%;
+    margin-top: 50px;
+  }
+  .rightheading {
+    font-family: Kartooni;
+    color: white;
+    font-weight: 400;
+    padding: 7px 0 0 15px;
+    font-size: 22px;
+  }
+  .rightheading2 {
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: end;
+    padding-left: 15px;
+    font-size: 22px;
+  }
+  .rightheadingdiv {
+    width: 311px;
+  
+    justify-content: space-between;
+    padding-right: 10px;
+    height: 50px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #e3d454 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .rightheading2div {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    height: 50px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #e3d454 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .rightimage1 {
+    width: 341.39px;
+    margin-top: 115px;
+  }
+  .borderleftside {
+    border-left: 9px solid #e3d454;
+    position: relative;
+    padding-left: 100px;
+    display: flex;
+  }
+  
+  .borderleftside:after {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #e3d454;
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 50px;
+    /* border: 8px solid rgb(216 216 216 / 34%) !important; */
+    box-sizing: content-box !important;
+    border-radius: 50%;
+    background-clip: padding-box;
+  }
+  .borderleftside2 {
+    border-left: 9px solid #e3d454;
+    position: relative;
+    padding-left: 100px;
+    display: flex;
+  
+  }
+  
+  .borderleftside2:after {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #e3d454;
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 50px;
+    /* border: 8px solid rgb(216 216 216 / 34%) !important; */
+    box-sizing: content-box !important;
+    border-radius: 50%;
+    background-clip: padding-box;
+  }
+  .image3div {
+    display: flex;
+    justify-content: center;
+  }
+  .image3 {
+    margin-right: 100px;
+    margin-top: 50px;
+    width: 184px;
+  }
+  .thirdheading2paragraph {
+    margin-right: 80px;
+    height: 259px;
+    width: 318px;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 50px;
+  }
+  .secondrowmarkup{
+    width: max-content !important;
+  }
+  .secondheading2paragraph li{
+    margin-right: 80px;
+  
+  }
+  
+  /* Responsive */
+  @media (max-width: 1399.98px) {
+  }
+  
+  @media (max-width: 1199.98px) {
+  }
+  @media (max-width: 991.98px) {
+    .borderleftside{
+      padding-left: 55px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .image1{
+      display: none;
+    }
+    .image3{
+      display: none;
+    }
+    .image2{
+      display: none;
+  
+    }
+    .heading2paragraph {
+      width: 271px;
+      margin-right: 0px;
+    }
+    .borderleftside2 {
+      
+      display: none;
+    }
+    
+    /* .borderleftside2:after {
+    display: none;
+    } */
+  
+    .heading2div {
+      margin-right: 0px;
+      transform: none;
+      padding: 0 0 0 10px;
+    }
+    .heading2 {
+      transform: none;
+    }
+    .secondheading2paragraph {
+      text-align: left;
+    }
+    .heading2paragraph {
+      margin-right: 0px;
+    }
+    .bordermobileview{
+      border-left: 9px solid #e3d454;
+      position: relative;
+      padding-left: 55px;   
+    }
+  
+    .bordermobileview:after {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #c2be9f;
+      content: "";
+      position: absolute;
+      left: -35px;
+      top: 50px;
+      border: 8px solid rgb(216 216 216 / 34%) !important;
+      box-sizing: content-box !important;
+      border-radius: 50%;
+      background-clip: padding-box;
+    }
+    
+    .bordermobileview::after{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #c2be9f;
+      content: "";
+      position: absolute;
+      left: -35px;
+      top: 50px;
+      border: 8px solid rgb(216 216 216 / 34%) !important;
+      box-sizing: content-box !important;
+      border-radius: 50%;
+      background-clip: padding-box;
+    }
+    
+  }
+  @media (max-width: 575.98px) {
+    .section {
+      padding-left: 55px;
+    }
+    .secondrow {
+      padding-left: 55px;
+      justify-content: flex-start;
+    }
+    .secondheading2paragraph{
+      margin-right: 0px;
+      text-align: initial;
+      
+    }
+    .heading2paragraph {
+      width: 271px;
+      /* background-image: url(../../../public/HomeAssests/roadmap2.png); */
+      z-index: 99999;
+    }
+    .thirdheading2paragraph {
+      width: 239px;
+    }
+    .rightheadingdiv {
+      width: 100%;
+    }
+   
+  
+   
+    .secondheading2paragraph li{
+      margin-right: 1px;
+      letter-spacing: 2px;
+    
+    }
+    .bordermobileview{
+      padding-left: 0px;
+    }
+  }

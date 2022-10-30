@@ -5,7 +5,7 @@ import vectorImage from '../../assets/HomeImages/NFT Mint/Group 9 Copy.png'
 function Subscribe() {
   return (
     <>
-    <section className="subscribesection">
+    <section className="subscribesection" id='contact'>
         <div className="container">
             <div className="row">
                 <div className="col-lg-12">

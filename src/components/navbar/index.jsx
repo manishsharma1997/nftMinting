@@ -2,15 +2,37 @@ import React, { useState } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import setting from '../../assets/HomeImages/setting.png'
-import logo from '../../assets/HomeImages/Logo.png';
+import logo1 from '../../assets/HomeImages/NFT Mint/logo1.png';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+
 const Header = () => {
   const [show, setShow] = useState(false);
   const [general,setGeneral] =useState(false);
   const [style,setStyle]=useState(false)
+  const [seo,setSeo]=useState(false)
+  const [custom,setCustom]=useState(false)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const Gen = ()=>{
+    setGeneral(true)
+    setStyle(false)
+    setSeo(false)
+    
+  }
+  const St = ()=>{
+    setGeneral(false)
+    setStyle(true)
+    setSeo(false)
+    
+  }
+  const So = ()=>{
+    setGeneral(false)
+    setStyle(false)
+    setSeo(true)
+    
+  }
   return (
     <>
       <section className="section">
@@ -21,9 +43,9 @@ const Header = () => {
                 <div className="container-fluid">
                 <ul className="navbar-nav ">
                 <li className="nav-item">
-                  <a className="navbar-brand" href="#">
-                    <img className="navlogo" src={logo} alt=''></img>
-                    NFT Genrator
+                  <a className="navbar-brand" href="/">
+                    <img className="navlogo" src={logo1} alt=''></img>
+                    {/* NFT Genrator */}
                   </a>
                   
                   </li>
@@ -48,7 +70,7 @@ const Header = () => {
                         <a
                           className="nav-link active"
                           aria-current="page"
-                          href="#"
+                          href="#home"
                         >
                           Home
                         </a>
@@ -57,7 +79,7 @@ const Header = () => {
                         <a
                           className="nav-link active"
                           aria-current="page"
-                          href="#"
+                          href="#about"
                         >
                           About
                         </a>
@@ -66,7 +88,7 @@ const Header = () => {
                         <a
                           className="nav-link active"
                           aria-current="page"
-                          href="#"
+                          href="#collection"
                         >
                           Collections
                         </a>
@@ -75,7 +97,7 @@ const Header = () => {
                         <a
                           className="nav-link active"
                           aria-current="page"
-                          href="#">
+                          href="#contact">
                           Contact
                         </a>
                       </li>
@@ -113,25 +135,18 @@ const Header = () => {
         <Modal.Body>
           <div className="nab">
             <ul className="ull">
-              <li onClick={()=>setGeneral(true)}>Genral</li>
-              <li onClick={()=>setStyle(true)}>Style</li>
-              <li>SEO</li>
-              <li>Custom</li>
-              <li>Domain&Publish</li>
+              <li onClick={()=>Gen()}>Genral</li>
+              <li onClick={()=>St()}>Style</li>
+              <li onClick={()=>So()}>SEO</li>
+              <li onClick={()=>setCustom(true)}>Custom</li>
+              <li >Domain&Publish</li>
             </ul>
           </div>
-          {style?<>
+          { (style==true)?<>
            <p className="mt-4" style={{paddingLeft:'40px',fontWeight:'600',fontSize:'24px'}}>Style</p>
           <button type="file" style={{color:'white',padding:'5px 20px 5px 20px',background:'skyblue',marginLeft:'40px'}}>Choose File</button></>:
-
-          general?
-          <>
-          <p className="mt-4" style={{color:'black',fontSize:'24px',fontWeight:'600',paddingLeft:'40px'}}>General Information</p>
-          <p className="pp ">Website ID : 63jhy582444lki</p>
-          <p className="pp">Owner ID : 63jhy582444lki</p>
-          <p className="pp">Status  : Not Subscribed.</p>
-         <div className="d-flex"> <p className="pp">Connected contact : </p><a>Select your contract</a></div>
-         </>:
+          
+          (general==true)?
           <>
           <p className="mt-4" style={{color:'black',fontSize:'24px',fontWeight:'600',paddingLeft:'40px'}}>General Information</p>
           <p className="pp ">Website ID : 63jhy582444lki</p>
@@ -139,8 +154,52 @@ const Header = () => {
           <p className="pp">Status  : Not Subscribed.</p>
          <div className="d-flex"> <p className="pp">Connected contact : </p><a>Select your contract</a></div>
          </>
+         :
+         (seo==true)?
+         <>
+         <div style={{marginLeft:'40px'}}>
+<div className="formline1">
+  <div>
+    <p style={{margin:'0px'}}>Title</p>
+  <input type='text' placeholder="Title"></input></div>
+<div>
+<p style={{margin:'0px'}}>Preview Title</p>
+  <input type='text' placeholder="Preview Title"></input>
+  </div>
+</div>
+<p style={{marginTop:'20px',marginBottom:'0px'}}>Description</p>
+<input style={{width:'100%',height:'100px'}} type='text' placeholder="Enter Text"></input>
 
-  }
+<p style={{marginTop:'20px',marginBottom:'0px'}}>Keywords</p>
+<input style={{width:'100%'}} type='text' placeholder="Keywords"></input>
+
+<div className="formline1">
+  <div>
+    <p style={{margin:'0px'}}>Language</p>
+  <input type='text' placeholder="Language"></input></div>
+<div>
+<p style={{margin:'0px'}}>Robots</p>
+  <input type='text' placeholder="Robots "></input>
+  </div>
+</div>
+
+<p style={{marginTop:'20px',marginBottom:'0px'}}>Cannonical Url</p>
+<input style={{width:'100%'}} type='text' placeholder="Url"></input>
+
+<button className="btn btn-success mt-3">Save Change</button>
+</div>
+
+         </>:
+          <>
+          <p className="mt-4" style={{color:'black',fontSize:'24px',fontWeight:'600',paddingLeft:'40px'}}>General Information</p>
+          <p className="pp ">Website ID : 63jhy582444lki</p>
+          <p className="pp">Owner ID : 63jhy582444lki</p>
+          <p className="pp">Status  : Not Subscribed.</p>
+         <div className="d-flex"> <p className="pp">Connected contact : </p><a>Select your contract</a></div>
+
+       
+         </>
+}
         </Modal.Body>
         <Modal.Footer>
          
