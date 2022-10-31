@@ -213,8 +213,13 @@ const Header = () => {
             :
             (custom == true) ?
             <>
-            
-
+            <h3 style={{height: '28px', width: '140px', color: '#000000',marginLeft: '40px', fontSize: '20px', fontWeight: 500, letterSpacing: 0, lineHeight: '22px'}}>Custom Code</h3>
+            <p style={{height: '20px', width: '190px', color: '#000000', marginLeft: '40px', fontSize: '14px', fontWeight: 500, letterSpacing: 0, lineHeight: '16px'}}>&lt;head &gt;custom HTML code:</p>
+            <textarea type="text" style={{boxSizing: 'border-box', height: '102px', width: '665px', marginLeft: '40px', border: '1px solid #DDDDDD', borderRadius: '6px', backgroundColor: '#FFFFFF'}} placeholder='<script>' />
+            <p style={{height: '20px', width: '190px', color: '#000000', marginLeft: '40px',marginTop: '10px', fontSize: '14px', fontWeight: 500, letterSpacing: 0, lineHeight: '16px'}}>&lt;/body &gt;custom HTML code:</p>
+            <textarea type="text" style={{boxSizing: 'border-box', height: '102px', width: '665px', marginLeft: '40px', border: '1px solid #DDDDDD', borderRadius: '6px', backgroundColor: '#FFFFFF'}} placeholder='<script>'/>
+            <button type="button" style={{ color: 'white', padding: '5px 20px 5px 20px', background: 'skyblue', marginLeft: '40px', height: '40px', width: '212px', borderRadius: '3px',
+                backgroundColor: '#2F66EE', marginRight: 'auto', marginTop: '30px' }}>Save Changes</button>
             </>
             :
             (domainPublish == true) ?
