@@ -8,30 +8,48 @@ import Modal from 'react-bootstrap/Modal';
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  const [general,setGeneral] =useState(false);
-  const [style,setStyle]=useState(false)
-  const [seo,setSeo]=useState(false)
-  const [custom,setCustom]=useState(false)
+  const [general, setGeneral] = useState(false);
+  const [style, setStyle] = useState(false)
+  const [seo, setSeo] = useState(false)
+  const [custom, setCustom] = useState(false)
+  const [domainPublish, setDomainPublish] = useState(false)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const Gen = ()=>{
+  const Gen = () => {
     setGeneral(true)
     setStyle(false)
     setSeo(false)
-    
+    setCustom(false)
+    setDomainPublish(false)
   }
-  const St = ()=>{
+  const St = () => {
     setGeneral(false)
     setStyle(true)
     setSeo(false)
-    
+    setCustom(false)
+    setDomainPublish(false)
   }
-  const So = ()=>{
+  const So = () => {
     setGeneral(false)
     setStyle(false)
     setSeo(true)
-    
+    setCustom(false)
+    setDomainPublish(false)
+  }
+  const Cus = () => {
+    setGeneral(false)
+    setStyle(false)
+    setSeo(false)
+    setCustom(true)
+    setDomainPublish(false)
+  }
+  const Dmpb = () => {
+    setGeneral(false)
+    setStyle(false)
+    setSeo(false)
+    setCustom(false)
+    setDomainPublish(true)
   }
   return (
     <>
@@ -41,14 +59,14 @@ const Header = () => {
             <div className="col-lg-12">
               <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid">
-                <ul className="navbar-nav ">
-                <li className="nav-item">
-                  <a className="navbar-brand" href="/">
-                    <img className="navlogo" src={logo1} alt=''></img>
-                    {/* NFT Genrator */}
-                  </a>
-                  
-                  </li>
+                  <ul className="navbar-nav ">
+                    <li className="nav-item">
+                      <a className="navbar-brand" href="/">
+                        <img className="navlogo" src={logo1} alt=''></img>
+                        {/* NFT Genrator */}
+                      </a>
+
+                    </li>
                   </ul>
                   <button
                     className="navbar-toggler"
@@ -102,21 +120,21 @@ const Header = () => {
                         </a>
                       </li>
 
-                        <li className="nav-item ">
-                          <a  className="nav-link active"
+                      <li className="nav-item ">
+                        <a className="nav-link active"
                           aria-current="page"
                           href="#">
-                            search
-                          </a>
-                        </li>
-                        <li className="nav-item ">
-                          <a  className="nav-link active"
+                          search
+                        </a>
+                      </li>
+                      <li className="nav-item ">
+                        <a className="nav-link active"
                           aria-current="page"
                           onClick={handleShow}>
-                            setting
-                          </a>
-                        </li>
-                      
+                          setting
+                        </a>
+                      </li>
+
                     </ul>
                   </div>
                 </div>
@@ -126,83 +144,98 @@ const Header = () => {
         </div>
       </section>
       <Modal
-       size="lg"
-       aria-labelledby="contained-modal-title-vcenter"
-       centered show={show} onHide={handleClose} animation={false}>
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
-          <Modal.Title style={{marginLeft:'auto'}}>Settings</Modal.Title>
+          <Modal.Title style={{ marginLeft: 'auto' }}>Settings</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="nab">
             <ul className="ull">
-              <li onClick={()=>Gen()}>Genral</li>
-              <li onClick={()=>St()}>Style</li>
-              <li onClick={()=>So()}>SEO</li>
-              <li onClick={()=>setCustom(true)}>Custom</li>
-              <li >Domain&Publish</li>
+              <li onClick={() => Gen()}>Genral</li>
+              <li onClick={() => St()}>Style</li>
+              <li onClick={() => So()}>SEO</li>
+              <li onClick={() => Cus()}>Custom</li>
+              <li onClick={() => Dmpb()}>Domain&Publish</li>
             </ul>
           </div>
-          { (style==true)?<>
-           <p className="mt-4" style={{paddingLeft:'40px',fontWeight:'600',fontSize:'24px'}}>Style</p>
-          <button type="file" style={{color:'white',padding:'5px 20px 5px 20px',background:'skyblue',marginLeft:'40px'}}>Choose File</button></>:
-          
-          (general==true)?
-          <>
-          <p className="mt-4" style={{color:'black',fontSize:'24px',fontWeight:'600',paddingLeft:'40px'}}>General Information</p>
-          <p className="pp ">Website ID : 63jhy582444lki</p>
-          <p className="pp">Owner ID : 63jhy582444lki</p>
-          <p className="pp">Status  : Not Subscribed.</p>
-         <div className="d-flex"> <p className="pp">Connected contact : </p><a>Select your contract</a></div>
-         </>
-         :
-         (seo==true)?
-         <>
-         <div style={{marginLeft:'40px'}}>
-<div className="formline1">
-  <div>
-    <p style={{margin:'0px'}}>Title</p>
-  <input type='text' placeholder="Title"></input></div>
-<div>
-<p style={{margin:'0px'}}>Preview Title</p>
-  <input type='text' placeholder="Preview Title"></input>
-  </div>
-</div>
-<p style={{marginTop:'20px',marginBottom:'0px'}}>Description</p>
-<input style={{width:'100%',height:'100px'}} type='text' placeholder="Enter Text"></input>
+          {(style == true) ?
+            <>
+              <p className="mt-4" style={{ paddingLeft: '40px', fontWeight: '600', fontSize: '24px' }}>Style</p>
+              <button type="submit" style={{ color: 'white', padding: '5px 20px 5px 20px', background: 'skyblue', marginLeft: '40px', height:'40px', width:'212px', borderRadius: '3px',
+                backgroundColor: '#2F66EE' }}>Choose File</button>
+            </>
+            :
+            (general == true) ?
+            <>
+              <p className="mt-4" style={{ color: 'black', fontSize: '24px', fontWeight: '600', paddingLeft: '40px' }}>General Information</p>
+              <p className="pp ">Website ID : 63jhy582444lki</p>
+              <p className="pp">Owner ID : 63jhy582444lki</p>
+              <p className="pp">Status  : Not Subscribed.</p>
+              <div className="d-flex"> <p className="pp">Connected contact : </p><a>Select your contract</a></div>
+            </>
+            :
+            (seo == true) ?
+            <>
+              <div style={{ marginLeft: '40px' }}>
+                <div className="formline1">
+                  <div>
+                    <p style={{ margin: '0px' }}>Title</p>
+                    <input type='text' placeholder="Title"></input></div>
+                  <div>
+                    <p style={{ margin: '0px' }}>Preview Title</p>
+                    <input type='text' placeholder="Preview Title"></input>
+                  </div>
+                </div>
+                <p style={{ marginTop: '20px', marginBottom: '0px' }}>Description</p>
+                <input style={{ width: '100%', height: '100px' }} type='text' placeholder="Enter Text"></input>
 
-<p style={{marginTop:'20px',marginBottom:'0px'}}>Keywords</p>
-<input style={{width:'100%'}} type='text' placeholder="Keywords"></input>
+                <p style={{ marginTop: '20px', marginBottom: '0px' }}>Keywords</p>
+                <input style={{ width: '100%' }} type='text' placeholder="Keywords"></input>
 
-<div className="formline1">
-  <div>
-    <p style={{margin:'0px'}}>Language</p>
-  <input type='text' placeholder="Language"></input></div>
-<div>
-<p style={{margin:'0px'}}>Robots</p>
-  <input type='text' placeholder="Robots "></input>
-  </div>
-</div>
+                <div className="formline1">
+                  <div>
+                    <p style={{ margin: '0px' }}>Language</p>
+                    <input type='text' placeholder="Language"></input></div>
+                  <div>
+                    <p style={{ margin: '0px' }}>Robots</p>
+                    <input type='text' placeholder="Robots "></input>
+                  </div>
+                </div>
 
-<p style={{marginTop:'20px',marginBottom:'0px'}}>Cannonical Url</p>
-<input style={{width:'100%'}} type='text' placeholder="Url"></input>
+                <p style={{ marginTop: '20px', marginBottom: '0px' }}>Cannonical Url</p>
+                <input style={{ width: '100%' }} type='text' placeholder="Url"></input>
 
-<button className="btn btn-success mt-3">Save Change</button>
-</div>
+                <button className="btn btn-success mt-3">Save Change</button>
+              </div>
+            </>
+            :
+            (custom == true) ?
+            <>
+            
 
-         </>:
-          <>
-          <p className="mt-4" style={{color:'black',fontSize:'24px',fontWeight:'600',paddingLeft:'40px'}}>General Information</p>
-          <p className="pp ">Website ID : 63jhy582444lki</p>
-          <p className="pp">Owner ID : 63jhy582444lki</p>
-          <p className="pp">Status  : Not Subscribed.</p>
-         <div className="d-flex"> <p className="pp">Connected contact : </p><a>Select your contract</a></div>
+            </>
+            :
+            (domainPublish == true) ?
+            <>
+              <p className="mt-4" style={{ paddingLeft: '40px', fontWeight: '600', fontSize: '24px' }}>Custom Domains</p>
+              <button type="button" style={{ color: 'white', padding: '5px 20px 5px 20px', background: 'skyblue', marginLeft: '40px', height: '40px', width: '212px', borderRadius: '3px',
+                backgroundColor: '#2F66EE' }}>Add Domain</button>
 
-       
-         </>
-}
+            </>
+            :
+            <>
+              <p className="mt-4" style={{ color: 'black', fontSize: '24px', fontWeight: '600', paddingLeft: '40px' }}>General Information</p>
+              <p className="pp ">Website ID : 63jhy582444lki</p>
+              <p className="pp">Owner ID : 63jhy582444lki</p>
+              <p className="pp">Status  : Not Subscribed.</p>
+              <div className="d-flex"> <p className="pp">Connected contact : </p><a>Select your contract</a></div>
+            </>
+          }
         </Modal.Body>
         <Modal.Footer>
-         
+
           <Button className="delete" onClick={handleClose}>
             Delete Website
           </Button>
