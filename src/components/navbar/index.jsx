@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import { useModal } from "../../utils/ModalContext";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import setting from '../../assets/HomeImages/setting.png'
 import logo1 from '../../assets/HomeImages/NFT Mint/logo1.png';
 import Button from 'react-bootstrap/Button';
+import Button1 from "../Button/Button1";
 import Modal from 'react-bootstrap/Modal';
-
+import { isMetaMaskInstalled } from '../../config';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { FaDiscord, FaWallet } from "react-icons/fa";
+import WalletModal from "../modal/walletModal/WalletModal";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [general, setGeneral] = useState(false);
@@ -15,7 +20,6 @@ const Header = () => {
   const [domainPublish, setDomainPublish] = useState(false)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const Gen = () => {
     setGeneral(true)
     setStyle(false)
@@ -51,6 +55,28 @@ const Header = () => {
     setCustom(false)
     setDomainPublish(true)
   }
+  
+  const { 
+    walletModalHandle, 
+    metamaskModalHandle, 
+    account, 
+    isWalletAlreadyConnected, 
+    disconnectWalletFromApp } = useModal();
+
+    const substr = (str, n) =>{
+      return str.length > n ? str.substr(0, n -1) : str;
+    }
+    const handleWalletConnect = async () =>{
+      
+      if(!isMetaMaskInstalled()){
+        console.log("ghjh");
+        metamaskModalHandle();
+      }else{
+        console.log(walletModalHandle());
+        walletModalHandle();
+      }
+    }
+	
   return (
     <>
       <section className="section">
@@ -124,15 +150,40 @@ const Header = () => {
                         <a className="nav-link active"
                           aria-current="page"
                           href="#">
-                          search
+                          Search
                         </a>
                       </li>
                       <li className="nav-item ">
                         <a className="nav-link active"
                           aria-current="page"
                           onClick={handleShow}>
-                          setting
+                          Settings
                         </a>
+                      </li>
+
+                      <li className="nav-item ">
+                      { account ?
+              <Dropdown>
+                <Dropdown.Toggle variant="white" id="dropdown-basic" className="connect_btn">
+                  { substr(account.toString(), 15) }
+                </Dropdown.Toggle>
+          
+                <Dropdown.Menu>
+                  <Dropdown.Item href="# " onClick={() => disconnectWalletFromApp() }>Disconnect</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              :
+              <Button1
+                sm
+                variant="hovered"
+                className="connect_btn"
+                onClick={() => handleWalletConnect()}
+              >
+                <FaWallet />
+                Connect
+              </Button1>
+
+              }
                       </li>
 
                     </ul>
