@@ -103,8 +103,11 @@ const ButtonWrapper = styled.button`
     ${({ variant }) =>
     variant === "hovered" &&
     css`
-      background: rgba(255, 255, 255, 0.35);
-      color: #ffffff;
+      background-color: #D5F70A;
+      color: black;
+      font-family: Kartooni;
+      letter-spacing: 1px;
+      border-radius:10px;
 
       &:hover {
         &::before {

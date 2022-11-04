@@ -6,9 +6,11 @@ import { Button, Card } from 'react-bootstrap'
 import card3img from '../../assets/HomeImages/NFT Mint/image22.png'
 import eyeImage from '../../assets/HomeImages/NFT Mint/Show.png' 
 import timeImage from '../../assets/HomeImages/NFT Mint/TimeCircle.png' 
+import Spinner from 'react-bootstrap/Spinner';
 const mint = () => {
     return (
         <>
+      
             <section className="mintsection" id='about'>
                 <div className="container">
                     <div className="row">

@@ -22,7 +22,7 @@ const MetamaskModal = () => {
             <div className="modal_body text-center">
               <div className="wallet_list">
                 <a href="https://metamask.io/download/" target="_blank" rel="noreferrer">
-                  <img src={metamaskIcon} alt="Meta-mask" />
+                  <img src={metamaskIcon} alt="" />
                   Please install metamask extension!
                 </a>
                 </div>

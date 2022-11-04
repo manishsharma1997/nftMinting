@@ -8,8 +8,8 @@
     margin-left: auto;
 }
 .navbar li{
+    margin-right: 10px;
     height: 20px;
-    width: 124px;
     color: #ffff !important;
     font-family: "Kartooni";
     font-size: 16px;

@@ -185,6 +185,9 @@ const MintModalStyleWrapper = styled.div`
   .modal_mint_btn {
     button {
       width: 100%;
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-family: Kartooni;
     }
   }
   .modal_bottom_shape {

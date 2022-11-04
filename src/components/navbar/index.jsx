@@ -64,7 +64,7 @@ const Header = () => {
     disconnectWalletFromApp } = useModal();
 
     const substr = (str, n) =>{
-      return str.length > n ? str.substr(0, n -1) : str;
+      return str.length > n ? str.substr(0, n -1)+"..."+str.substr(38,43) : str;
     }
     const handleWalletConnect = async () =>{
       
@@ -165,7 +165,9 @@ const Header = () => {
                       { account ?
               <Dropdown>
                 <Dropdown.Toggle variant="white" id="dropdown-basic" className="connect_btn">
-                  { substr(account.toString(), 15) }
+                  <div style={{backgroundColor: '#D5F70A', padding:'7px', borderRadius: '7px'}}>
+                  { substr(account.toString(),6) }
+                  </div>
                 </Dropdown.Toggle>
           
                 <Dropdown.Menu>
