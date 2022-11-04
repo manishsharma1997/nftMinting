@@ -141,7 +141,7 @@ const MintNowModal = () => {
               </div>
               { message && <p style={{color:'yellow'}}>{message}</p>}
               <div className="modal_mint_btn">
-                <Button lg variant="mint" onClick={() => mintNow() } style={{backgroundColor:'yellow'}}>
+                <Button lg variant="mint" onClick={() => {mintNow();mintModalHandle();setLoader(true);} } style={{backgroundColor:'yellow'}}>
                   Mint Now
                 </Button>
               </div>

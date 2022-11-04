@@ -9,13 +9,13 @@ import Wallet from '../../assets/HomeImages/NFT Mint/Wallet Copy@2x.png'
 import vector from '../../assets/HomeImages/NFT Mint/Group 9 Copy.png'
 const Home = () => {
         const { mintModalHandle, connectWalletModalHanlde, account } = useModal();
-  const [remaining, setRemaining] = useState(0);
+  const [remaining, setRemaining] = useState();
 
   useEffect(() =>{
     const calculateRemainingItems = async () => {
        let totaltMintedItems = await totalMintCount();
        console.log(totaltMintedItems);
-       setRemaining(totaltMintedItems);
+       setRemaining(parseInt(totaltMintedItems._hex,16));
     }
 
     calculateRemainingItems();
@@ -29,12 +29,12 @@ const Home = () => {
                                                         <p className='firstp'> CRAZY META 🎯 NFT COLLECTIONS
 
                                                         </p>
-                                                        <p className='p2'>0 / 9999 MINTED
+                                                        <p className='p2'>{remaining} / 9999 MINTED
 
                                                         </p>
                                                         <div className='d-flex mt-5'>
                                                         
-                                                                <button className='mintbtn'onClick={() => mintModalHandle()}>Mint Now</button>
+                                                                <button className='mintbtn' onClick={() => mintModalHandle()}>Mint Now</button>
                                                                 <p className='p3'>Add to Wishlist
 
                                                                 </p>
