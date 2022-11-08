@@ -5,6 +5,7 @@ import { isMetaMaskInstalled, ethereum } from '../config';
 
 
 export const mint = async (mint_amount) => {
+    try{
     if(isMetaMaskInstalled()){
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
@@ -16,6 +17,10 @@ export const mint = async (mint_amount) => {
         })
         return txnHash
     }
+}
+catch(err){
+    console.log(err);
+}
 }
 
 export const totalMintCount = async () => {

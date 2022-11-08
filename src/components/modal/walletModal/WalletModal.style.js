@@ -24,7 +24,7 @@ const WalletModalStyleWrapper = styled.div`
       width: 100%;
       background: #000;
       content: "";
-      opacity: 0.92;
+      opacity: 0.94;
       backdrop-filter: blur(33px);
     }
   }
@@ -42,15 +42,16 @@ const WalletModalStyleWrapper = styled.div`
       top: 0;
       height: 100%;
       width: 100%;
-      background: #171c21;
+      background: #1817212b;
       content: "";
+      border-radius:20px
     }
   }
 
   .mint_modal_content {
     height: 100%;
     width: 100%;
-    background: url(${modalBg});
+    // background: url(${modalBg});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -64,10 +65,10 @@ const WalletModalStyleWrapper = styled.div`
 
   .modal_header {
     h2 {
-      font-family: "Bakbak One";
+      font-family: "MisterVampire";
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 28px;
       line-height: 28px;
       text-align: center;
       text-transform: uppercase;
@@ -75,6 +76,7 @@ const WalletModalStyleWrapper = styled.div`
       max-width: 280px;
       margin: auto;
       margin-bottom: 26px;
+      color:yellow;
     }
 
     button {
@@ -97,7 +99,7 @@ const WalletModalStyleWrapper = styled.div`
       }
 
       &:before {
-        content: "";
+        // content: "";
         background: rgba(255, 255, 255, 0.1);
         height: 150%;
         width: 150%;
@@ -135,7 +137,10 @@ const WalletModalStyleWrapper = styled.div`
       color: #ffffff;
       text-align: left;
       cursor: pointer;
-
+border-radius:10px;
+justify-content:center;
+font-family:kartooni;
+letter-spacing:1.5px;
       span {
         position: absolute;
         right: 20px;
@@ -145,9 +150,11 @@ const WalletModalStyleWrapper = styled.div`
 
   .modal_bottom_text {
     color: rgba(255, 255, 255, 0.8);
+    font-family: 'Kartooni' !important;
     a {
       color: #ffffff;
       margin-left: 7px;
+      font-family: 'Kartooni' !important;
     }
   }
 

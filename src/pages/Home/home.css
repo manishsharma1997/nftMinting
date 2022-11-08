@@ -125,3 +125,14 @@
     line-height: 28px;
     margin-left: 60px;
 }
+
+._loading_overlay_content{
+    display: inherit;
+    position: fixed;
+    font-size: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 60px;
+    height: 60px;
+}

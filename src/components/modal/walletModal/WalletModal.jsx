@@ -22,37 +22,37 @@ const WalletModal = () => {
               </button>
             </div>
             <div className="modal_body text-center">
-              <p>
+              {/* <p>
                 Please select a wallet to connect for start Minting your NFTs
-              </p>
+              </p> */}
               <div className="wallet_list">
                 <a href="# " onClick={ () => connectWalletHandle() }>
                   <img src={metamaskIcon} alt="Meta-mask" />
                   MetaMask
-                  <span>
+                  {/* <span>
                     <FiChevronRight />
-                  </span>
+                  </span> */}
                 </a>
-                <a href="# ">
+                {/* <a href="# ">
                   <img src={formatic} alt="Coinbase" />
                   Coinbase
                   <span>
                     <FiChevronRight />
                   </span>
-                </a>
-                <a href="# ">
+                </a> */}
+                {/* <a href="# ">
                   <img src={trustWalletIcon} alt="Trust" />
                   Trust Wallet
                   <span>
                     <FiChevronRight />
                   </span>
-                </a>
+                </a> */}
                 <a href="# ">
                   <img src={walletConnect} alt="Wallet" />
                   WalletConnect
-                  <span>
+                  {/* <span>
                     <FiChevronRight />
-                  </span>
+                  </span> */}
                 </a>
               </div>
               <div className="modal_bottom_text">
@@ -64,10 +64,10 @@ const WalletModal = () => {
 
             <div className="modal_bottom_shape_wrap">
               <span className="modal_bottom_shape shape_left">
-                <img src={hoverShape} alt="bithu nft hover shape" />
+                {/* <img src={hoverShape} alt="bithu nft hover shape" /> */}
               </span>
               <span className="modal_bottom_shape shape_right">
-                <img src={hoverShape} alt="bithu nft hover shape" />
+                {/* <img src={hoverShape} alt="bithu nft hover shape" /> */}
               </span>
             </div>
           </div>

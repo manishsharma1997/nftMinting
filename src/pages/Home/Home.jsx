@@ -7,9 +7,15 @@ import homeimage from '../../assets/HomeImages/NFT Mint/homeimage.png'
 import lock from '../../assets/HomeImages/NFT Mint/Lock Copy@2x.png'
 import Wallet from '../../assets/HomeImages/NFT Mint/Wallet Copy@2x.png'
 import vector from '../../assets/HomeImages/NFT Mint/Group 9 Copy.png'
+import { ToastContainer } from 'react-toastify';
+// import Spinner from 'react-bootstrap/Spinner';
+// import LoadingOverlay from 'react-loading-overlay';
+// import FadeLoader from 'react-spinners/FadeLoader';
 const Home = () => {
-        const { mintModalHandle, connectWalletModalHanlde, account } = useModal();
+        // const { mintModalHandle, connectWalletModalHanlde, account} = useModal();
+        const {mintModalHandle} = useModal();
   const [remaining, setRemaining] = useState();
+//   const [loader,setLoader]=useState(false);
 
   useEffect(() =>{
     const calculateRemainingItems = async () => {
@@ -19,9 +25,13 @@ const Home = () => {
     }
 
     calculateRemainingItems();
-  },[])
+  },[remaining])
         return (
                 <>
+                 {/* {loader?
+        <Spinner className="spiner" style={{position:'fixed',top:'50%',left:'50%',zIndex:'9999999'}} animation="border" variant="warning" />
+    :null
+  } */}
                         <section className='homesection' id='home'>
                                 <div className='container'>
                                         <div className='row'>
@@ -29,7 +39,7 @@ const Home = () => {
                                                         <p className='firstp'> CRAZY META 🎯 NFT COLLECTIONS
 
                                                         </p>
-                                                        <p className='p2'>{remaining} / 9999 MINTED
+                                                        <p className='p2'>{remaining} / 20 MINTED
 
                                                         </p>
                                                         <div className='d-flex mt-5'>
@@ -117,7 +127,7 @@ const Home = () => {
                                 </div>
 
                         </section>
-
+                <ToastContainer />
                 </>
         )
 }

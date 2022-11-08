@@ -42,15 +42,17 @@ const MintModalStyleWrapper = styled.div`
       top: 0;
       height: 100%;
       width: 100%;
-      background: #171c21;
+      background: #171c213d;
       content: "";
+      border-radius:20px;
+      overflow:hidden;
     }
   }
 
   .mint_modal_content {
     height: 100%;
     width: 100%;
-    background: url(${modalBg});
+    // background: url(${modalBg});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -60,11 +62,12 @@ const MintModalStyleWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    opacity:0.95;
   }
 
   .modal_header {
     h2 {
-      font-family: "Bakbak One";
+      font-family: "MisterVampire";
       font-style: normal;
       font-weight: 400;
       font-size: 24px;
@@ -75,6 +78,7 @@ const MintModalStyleWrapper = styled.div`
       max-width: 280px;
       margin: auto;
       margin-bottom: 26px;
+      color:yellow;
     }
 
     button {
@@ -84,20 +88,20 @@ const MintModalStyleWrapper = styled.div`
       height: 45px;
       width: 45px;
       position: absolute;
-      right: 0px;
-      top: 0px;
+      right: 10px;
+      top: 14px;
       overflow: hidden;
       display: flex;
       justify-content: end;
       align-items: baseline;
-
+   border-radius:13px
       svg {
         margin-top: 5px;
         color: #ffffff;
       }
 
       &:before {
-        content: "";
+        // content: "";
         background: rgba(255, 255, 255, 0.1);
         height: 150%;
         width: 150%;
@@ -105,6 +109,7 @@ const MintModalStyleWrapper = styled.div`
         right: -35px;
         top: -35px;
         transform: rotate(45deg);
+        
       }
     }
   }
@@ -122,7 +127,7 @@ const MintModalStyleWrapper = styled.div`
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         h5 {
-          font-family: "Inter";
+          font-family: "kartooni";
           font-style: normal;
           font-weight: 600;
           font-size: 16px;
@@ -130,6 +135,7 @@ const MintModalStyleWrapper = styled.div`
           text-align: right;
           color: #ffffff;
           margin: 0;
+          letter-spacing:1.5px
         }
 
         .mint_quantity_sect {
@@ -168,7 +174,7 @@ const MintModalStyleWrapper = styled.div`
             background: transparent;
             padding: 0px 19px;
             outline: none;
-            font-family: "Bakbak One";
+            font-family: "kartooni";
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
@@ -188,6 +194,7 @@ const MintModalStyleWrapper = styled.div`
       font-size: 30px;
       letter-spacing: 2px;
       font-family: Kartooni;
+      border-radius: 44px;
     }
   }
   .modal_bottom_shape {

@@ -11,16 +11,20 @@ import MintNowModal from "./components/modal/mintNowModal/MintNowModal";
 import WalletModal from "./components/modal/walletModal/WalletModal";
 import MetamaskModal from "./components/modal/metamaskModal/MetamaskModal";
 import ConnectWallet from "./components/modal/metamask/ConnectWallet";
+import LoadingOverlay from 'react-loading-overlay';
+import FadeLoader from 'react-spinners/FadeLoader';
 function App() {
-  const {visibility,walletModalvisibility, metamaskModalVisibility, connectWalletModal } = useModal();
+  const {visibility,walletModalvisibility, metamaskModalVisibility, connectWalletModal, loading } = useModal();
   return (
     <>
       {visibility && <MintNowModal/>}
       {walletModalvisibility && <WalletModal />}
       {metamaskModalVisibility && <MetamaskModal/> }
       {connectWalletModal && <ConnectWallet/> }
+    <LoadingOverlay active={loading} spinner={<FadeLoader color={"#D5F70A"}/>}>
     <Navbar/>
     <Home/>
+    </LoadingOverlay>
     <Mint/>
     <Card />
     <Roadmap/>
