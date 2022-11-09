@@ -75,47 +75,56 @@ const MintNowModal = () => {
     }else{
       
       let txn = await mint(count);
-      if(!txn){
-        setloading(false);
-        toast.error("Transaction Rejected",{
-            position:"top-right",
-            autoClose:5000,
-            hideProgressBar:false,
-            newestOnTop:false,
-            closeOnClick:true,
-            rtl:false,
-            pauseOnFocusLoss:true,
-            draggable:true,
-            pauseOnHover:true,
-            theme:"dark",
-        })
+      // if(!txn){
+      //   setloading(false);
+      //   toast.error("Transaction Rejected",{
+      //       position:"top-right",
+      //       autoClose:5000,
+      //       hideProgressBar:false,
+      //       newestOnTop:false,
+      //       closeOnClick:true,
+      //       rtl:false,
+      //       pauseOnFocusLoss:true,
+      //       draggable:true,
+      //       pauseOnHover:true,
+      //       theme:"dark",
+      //   })
 
+      // }
+      // else{
+      //   setloading(false)
+      //   toast.info("Transaction is Processing...",{
+      //           position:"top-right",
+      //           autoClose:5000,
+      //           hideProgressBar:false,
+      //           newestOnTop:false,
+      //           closeOnClick:true,
+      //           rtl:false,
+      //           pauseOnFocusLoss:true,
+      //           draggable:true,
+      //           pauseOnHover:true,
+      //           theme:"dark",
+      //   })
+      // }
+      setloading(false);  
+      if(txn){
+        toast.success('Minted Successfully', {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
       }
-      else{
-        setloading(false)
-        toast.info("Transaction is Processing...",{
-                position:"top-right",
-                autoClose:5000,
-                hideProgressBar:false,
-                newestOnTop:false,
-                closeOnClick:true,
-                rtl:false,
-                pauseOnFocusLoss:true,
-                draggable:true,
-                pauseOnHover:true,
-                theme:"dark",
-        })
-      let totaltMintedItems = await totalMintCount();
-
-        setRemaining(totalItems - totaltMintedItems)
-      }
-        
-      if(txn.length){
+      // if(txn.length){
        
-        setMessage('Minted successfully!');
-      }else{
-        setMessage('Not')
-      }
+      //   setMessage('Minted successfully!');
+      // }else{
+      //   setMessage('Not')
+      // }
     }
   }
 

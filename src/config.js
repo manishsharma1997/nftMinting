@@ -1,3 +1,5 @@
+import { ethers } from "ethers";
+
 export const ethereum = window.ethereum;
 
 
@@ -19,8 +21,16 @@ export const connectWallet = async () =>{
 // connect to metakmask wallet
 export const connectAccount = async () =>{
     const accounts = await ethereum.request({method: 'eth_accounts'});
-    
     return accounts;
+}
+
+export const getbalance = async (address) =>{
+    const Balance = await ethereum.request({
+        method:'eth_getBalance',
+        params: [address, 'latest'] 
+    })
+    console.log(ethers.utils.formatEther(Balance));
+    return ethers.utils.formatEther(Balance)
 }
 
 

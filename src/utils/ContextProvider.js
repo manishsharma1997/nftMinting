@@ -5,10 +5,12 @@ import {
   connectWalletLocaly,
   isWalletConnected,
   disconnectWallet,
+  getbalance
 } from "../config";
 
 const ContextProvider = ({ children }) => {
   const [visibility, setVisibility] = useState(false);
+  const [balance, setBalance] = useState(0);
   const [walletModalvisibility, setModalvisibility] = useState(false);
   const [shareModalVisibility, setShareModalvisibility] = useState(false);
   const [metamaskModalVisibility, setMetamaskModalVisibility] = useState(false);
@@ -16,7 +18,11 @@ const ContextProvider = ({ children }) => {
   const [account, setAccount] = useState("");
   const [loading, setloading] = useState(false);
 
-
+  window.ethereum.on('accountsChanged',async function (accounts) {
+    setAccount(accounts);
+    const b = await getbalance(accounts[0]);
+    setBalance(Number(b).toFixed(3));
+  })
 
   const loader = () => {
     setloading(!loading)
@@ -49,6 +55,7 @@ const ContextProvider = ({ children }) => {
     if (!isWalletConnected()) {
       connectWalletLocaly();
     }
+    isWalletAlreadyConnected();
     setModalvisibility(!walletModalvisibility);
   };
 
@@ -56,6 +63,8 @@ const ContextProvider = ({ children }) => {
     if (isWalletConnected()) {
       const accounts = await connectWallet();
       setAccount(accounts);
+      const b = await getbalance(accounts[0]);
+      setBalance(Number(b).toFixed(3));
     }
   };
 
@@ -84,7 +93,9 @@ const ContextProvider = ({ children }) => {
         connectWalletModal,
         loader,
         loading,
-        setloading
+        setloading,
+        balance,
+        setBalance
       }}
     >
       {children}

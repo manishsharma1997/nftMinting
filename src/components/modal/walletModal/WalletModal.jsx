@@ -1,10 +1,10 @@
 import { useModal } from "../../../utils/ModalContext";
 import { FiX, FiChevronRight } from "react-icons/fi";
 import WalletModalStyleWrapper from "./WalletModal.style";
-import hoverShape from "../../../assets/images/icon/hov_shape_L.svg";
+// import hoverShape from "../../../assets/images/icon/hov_shape_L.svg";
 import metamaskIcon from "../../../assets/images/icon/MetaMask.svg";
-import formatic from "../../../assets/images/icon/Formatic.svg";
-import trustWalletIcon from "../../../assets/images/icon/Trust_Wallet.svg";
+// import formatic from "../../../assets/images/icon/Formatic.svg";
+// import trustWalletIcon from "../../../assets/images/icon/Trust_Wallet.svg";
 import walletConnect from "../../../assets/images/icon/WalletConnect.svg";
 const WalletModal = () => {
   const { walletModalHandle, connectWalletHandle } = useModal();

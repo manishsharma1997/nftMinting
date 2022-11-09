@@ -7,25 +7,45 @@ import homeimage from '../../assets/HomeImages/NFT Mint/homeimage.png'
 import lock from '../../assets/HomeImages/NFT Mint/Lock Copy@2x.png'
 import Wallet from '../../assets/HomeImages/NFT Mint/Wallet Copy@2x.png'
 import vector from '../../assets/HomeImages/NFT Mint/Group 9 Copy.png'
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer,toast } from 'react-toastify';
 // import Spinner from 'react-bootstrap/Spinner';
 // import LoadingOverlay from 'react-loading-overlay';
 // import FadeLoader from 'react-spinners/FadeLoader';
 const Home = () => {
         // const { mintModalHandle, connectWalletModalHanlde, account} = useModal();
-        const {mintModalHandle} = useModal();
+        const {mintModalHandle,account} = useModal();
   const [remaining, setRemaining] = useState();
 //   const [loader,setLoader]=useState(false);
-
+const calculateRemainingItems = async () => {
+        let totaltMintedItems = await totalMintCount();
+        console.log(totaltMintedItems);
+        setRemaining(parseInt(totaltMintedItems._hex,16));
+     }
+const mintNowHandler = ()=>{
+        if(account){
+                mintModalHandle();
+        }else{
+       toast.error("Plz Connect Your Wallet",{
+            position:"top-right",
+            autoClose:5000,
+            hideProgressBar:false,
+            newestOnTop:false,
+            closeOnClick:true,
+            rtl:false,
+            pauseOnFocusLoss:true,
+            draggable:true,
+            pauseOnHover:true,
+            theme:"dark",
+        })
+        }
+}
   useEffect(() =>{
-    const calculateRemainingItems = async () => {
-       let totaltMintedItems = await totalMintCount();
-       console.log(totaltMintedItems);
-       setRemaining(parseInt(totaltMintedItems._hex,16));
-    }
-
     calculateRemainingItems();
   },[remaining])
+
+  setInterval(() => {
+        calculateRemainingItems();
+  }, 1000);
         return (
                 <>
                  {/* {loader?
@@ -44,7 +64,7 @@ const Home = () => {
                                                         </p>
                                                         <div className='d-flex mt-5'>
                                                         
-                                                                <button className='mintbtn' onClick={() => mintModalHandle()}>Mint Now</button>
+                                                                <button className='mintbtn' onClick={mintNowHandler}>Mint Now</button>
                                                                 <p className='p3'>Add to Wishlist
 
                                                                 </p>

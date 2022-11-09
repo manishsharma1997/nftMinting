@@ -1,7 +1,7 @@
 import contract from '../utils/nftmint.json';
 import { ethers } from 'ethers';
 import { isMetaMaskInstalled, ethereum } from '../config';
-
+import {  toast } from 'react-toastify';
 
 
 export const mint = async (mint_amount) => {
@@ -15,11 +15,40 @@ export const mint = async (mint_amount) => {
             gasLimit: "285000",
             value: ethers.utils.parseEther((0.03 * mint_amount).toString())
         })
-        return txnHash
+        toast.info('Minting in Process...', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
+  
+      
+     
+      console.log(txnHash.hash,"Hash");
+      const txReceipt = await provider.getTransactionReceipt(
+        `${txnHash.hash}`
+      );
+      if (txReceipt && txReceipt.blockNumber) {
+        console.log(txReceipt,"receipt");
+        return txReceipt;
+      }
     }
 }
 catch(err){
-    console.log(err);
+    toast.error('Transaction Rejected', {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
 }
 }
 

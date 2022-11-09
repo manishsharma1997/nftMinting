@@ -60,7 +60,8 @@ const Header = () => {
     walletModalHandle, 
     metamaskModalHandle, 
     account, 
-    isWalletAlreadyConnected, 
+    isWalletAlreadyConnected,
+    balance, 
     disconnectWalletFromApp } = useModal();
 
     const substr = (str, n) =>{
@@ -172,6 +173,7 @@ const Header = () => {
           
                 <Dropdown.Menu>
                   <Dropdown.Item href="# " onClick={() => disconnectWalletFromApp() }>Disconnect</Dropdown.Item>
+                  <Dropdown.Item href="# " style={{borderTop:'1px solid'}}>Bal Avl: {balance}</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
               :
