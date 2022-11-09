@@ -29,8 +29,10 @@ export const mint = async (mint_amount) => {
       
      
       console.log(txnHash.hash,"Hash");
-      const txReceipt = await provider.getTransactionReceipt(
-        `${txnHash.hash}`
+      const txReceipt = await provider.waitForTransaction(
+        `${txnHash.hash}`,
+        1,
+        300000
       );
       if (txReceipt && txReceipt.blockNumber) {
         console.log(txReceipt,"receipt");
