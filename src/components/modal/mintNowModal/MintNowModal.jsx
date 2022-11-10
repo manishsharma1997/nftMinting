@@ -27,7 +27,7 @@ const MintNowModal = () => {
   const {mintModalHandle, loader, setloading} = useModal();
   console.log("HELLO ", setloading);
 
-  let totalItems = 20;
+  let totalItems = 30;
   let price = 0.03;
 
   const increaseCount = () => {
@@ -67,47 +67,16 @@ const MintNowModal = () => {
 
   const mintNow = async () => {
     // setLoader(true)
-   
+   try {
     if(count >= 10){
       setMessage('Maximum minting ammount exceeding!');
     }else if(count < 1){
       setMessage('Minimum minting ammount 1.');
-    }else{
-      
-      let txn = await mint(count);
-      // if(!txn){
-      //   setloading(false);
-      //   toast.error("Transaction Rejected",{
-      //       position:"top-right",
-      //       autoClose:5000,
-      //       hideProgressBar:false,
-      //       newestOnTop:false,
-      //       closeOnClick:true,
-      //       rtl:false,
-      //       pauseOnFocusLoss:true,
-      //       draggable:true,
-      //       pauseOnHover:true,
-      //       theme:"dark",
-      //   })
-
-      // }
-      // else{
-      //   setloading(false)
-      //   toast.info("Transaction is Processing...",{
-      //           position:"top-right",
-      //           autoClose:5000,
-      //           hideProgressBar:false,
-      //           newestOnTop:false,
-      //           closeOnClick:true,
-      //           rtl:false,
-      //           pauseOnFocusLoss:true,
-      //           draggable:true,
-      //           pauseOnHover:true,
-      //           theme:"dark",
-      //   })
-      // }
-      setloading(false);  
-      if(txn){
+    } else{
+      let txn = await mint(count,setloading);
+      console.log(txn,"txn");
+        setloading(false);
+           if(txn){
         toast.success('Minted Successfully', {
           position: "top-right",
           autoClose: 4000,
@@ -119,13 +88,12 @@ const MintNowModal = () => {
           theme: "dark",
           });
       }
-      // if(txn.length){
-       
-      //   setMessage('Minted successfully!');
-      // }else{
-      //   setMessage('Not')
-      // }
     }
+   } catch (error) {
+    setloading(false);
+    console.log(error,"error");
+   }
+    
   }
 
   useEffect(() => {
@@ -161,7 +129,7 @@ console.log('554');
                   <li>
                     <h5>Remaining</h5>
                     <h5>
-                      {remaining}/<span>20</span>
+                      {remaining}/<span>30</span>
                     </h5>
                   </li>
                   <li>

@@ -43,9 +43,9 @@ const mintNowHandler = ()=>{
     calculateRemainingItems();
   },[remaining])
 
-  setInterval(() => {
-        calculateRemainingItems();
-  }, 1000);
+//   setInterval(() => {
+//         calculateRemainingItems();
+//   }, 1000);
         return (
                 <>
                  {/* {loader?
@@ -59,7 +59,7 @@ const mintNowHandler = ()=>{
                                                         <p className='firstp'> CRAZY META 🎯 NFT COLLECTIONS
 
                                                         </p>
-                                                        <p className='p2'>{remaining} / 20 MINTED
+                                                        <p className='p2'>{remaining} / 30 MINTED
 
                                                         </p>
                                                         <div className='d-flex mt-5'>

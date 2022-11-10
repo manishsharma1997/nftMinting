@@ -3,7 +3,7 @@ import { useModal } from "../../utils/ModalContext";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import setting from '../../assets/HomeImages/setting.png'
-import logo1 from '../../assets/HomeImages/NFT Mint/logo1.png';
+import logo1 from '../../assets/HomeImages/NFT Mint/logo2.png';
 import Button from 'react-bootstrap/Button';
 import Button1 from "../Button/Button1";
 import Modal from 'react-bootstrap/Modal';
@@ -89,7 +89,7 @@ const Header = () => {
                   <ul className="navbar-nav ">
                     <li className="nav-item">
                       <a className="navbar-brand" href="/">
-                        <img className="navlogo" src={logo1} alt=''></img>
+                        <img className="navlogo" height={40} src={logo1} alt=''></img>
                         {/* NFT Genrator */}
                       </a>
 
@@ -167,13 +167,13 @@ const Header = () => {
               <Dropdown>
                 <Dropdown.Toggle variant="white" id="dropdown-basic" className="connect_btn">
                   <div style={{backgroundColor: '#D5F70A', padding:'7px', borderRadius: '7px'}}>
-                  { substr(account.toString(),6) }
+                  Bal Avl: {balance} | { substr(account.toString(),6) }
                   </div>
                 </Dropdown.Toggle>
           
                 <Dropdown.Menu>
                   <Dropdown.Item href="# " onClick={() => disconnectWalletFromApp() }>Disconnect</Dropdown.Item>
-                  <Dropdown.Item href="# " style={{borderTop:'1px solid'}}>Bal Avl: {balance}</Dropdown.Item>
+                  {/* <Dropdown.Item href="# " style={{borderTop:'1px solid'}}>Bal Avl: {balance}</Dropdown.Item> */}
                 </Dropdown.Menu>
               </Dropdown>
               :
