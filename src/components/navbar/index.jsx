@@ -10,7 +10,6 @@ import Modal from 'react-bootstrap/Modal';
 import { isMetaMaskInstalled } from '../../config';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FaDiscord, FaWallet } from "react-icons/fa";
-import WalletModal from "../modal/walletModal/WalletModal";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [general, setGeneral] = useState(false);
@@ -59,10 +58,9 @@ const Header = () => {
   const { 
     walletModalHandle, 
     metamaskModalHandle, 
-    account, 
-    isWalletAlreadyConnected,
-    balance, 
-    disconnectWalletFromApp } = useModal();
+    setDisConnectModal,
+    account,
+     } = useModal();
 
     const substr = (str, n) =>{
       return str.length > n ? str.substr(0, n -1)+"..."+str.substr(38,43) : str;
@@ -164,18 +162,19 @@ const Header = () => {
 
                       <li className="nav-item ">
                       { account ?
-              <Dropdown>
-                <Dropdown.Toggle variant="white" id="dropdown-basic" className="connect_btn">
-                  <div style={{backgroundColor: '#D5F70A', padding:'7px', borderRadius: '7px'}}>
-                  Bal Avl: {balance} | { substr(account.toString(),6) }
-                  </div>
-                </Dropdown.Toggle>
+              <React.Fragment>
+                {/* <Dropdown.Toggle variant="white" id="dropdown-basic" className="connect_btn"> */}
+                  <button onClick={()=>setDisConnectModal(true)} style={{backgroundColor: '#D5F70A', padding:'7px', borderRadius: '7px'}}>
+                    {/* Bal Avl: {balance} |  */}
+                    { substr(account.toString(),6) }
+                  </button>
+                {/* </Dropdown.Toggle> */}
           
-                <Dropdown.Menu>
-                  <Dropdown.Item href="# " onClick={() => disconnectWalletFromApp() }>Disconnect</Dropdown.Item>
+                {/* <Dropdown.Menu> */}
+                  {/* <Dropdown.Item href="# " onClick={() => disconnectWalletFromApp() }>Disconnect</Dropdown.Item> */}
                   {/* <Dropdown.Item href="# " style={{borderTop:'1px solid'}}>Bal Avl: {balance}</Dropdown.Item> */}
-                </Dropdown.Menu>
-              </Dropdown>
+                {/* </Dropdown.Menu> */}
+              </React.Fragment>
               :
               <Button1
                 sm

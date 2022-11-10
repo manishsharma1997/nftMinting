@@ -13,15 +13,13 @@ import { ToastContainer,toast } from 'react-toastify';
 // import FadeLoader from 'react-spinners/FadeLoader';
 const Home = () => {
         // const { mintModalHandle, connectWalletModalHanlde, account} = useModal();
-        const {mintModalHandle,account} = useModal();
-  const [remaining, setRemaining] = useState();
+        const {mintModalHandle,account,remaining,calculateRemainingItems} = useModal();
 //   const [loader,setLoader]=useState(false);
-const calculateRemainingItems = async () => {
-        let totaltMintedItems = await totalMintCount();
-        console.log(totaltMintedItems);
-        setRemaining(parseInt(totaltMintedItems._hex,16));
-     }
-const mintNowHandler = ()=>{
+
+     useEffect(() => {
+        calculateRemainingItems();
+     },[]);
+const mintNowHandler = (s)=>{
         if(account){
                 mintModalHandle();
         }else{
@@ -39,9 +37,7 @@ const mintNowHandler = ()=>{
         })
         }
 }
-  useEffect(() =>{
-    calculateRemainingItems();
-  },[remaining])
+  
 
 //   setInterval(() => {
 //         calculateRemainingItems();
@@ -72,6 +68,7 @@ const mintNowHandler = ()=>{
                                                         <br />
                                                         <p className='p4'>MAX 2 NFTS PER WALLET . PRICE 0.09 ETH + GAS
                                                                 MINT IS LIVE<span className='spanp4'> UNTIL 25 APR 04:00H</span>
+                                                                <br />
                                                                 PRESALE : SOLDOUT</p>
                                                         <div className='d-flex'>
                                                                 <div>

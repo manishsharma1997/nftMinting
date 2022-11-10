@@ -13,10 +13,12 @@ import MetamaskModal from "./components/modal/metamaskModal/MetamaskModal";
 import ConnectWallet from "./components/modal/metamask/ConnectWallet";
 import LoadingOverlay from 'react-loading-overlay';
 import FadeLoader from 'react-spinners/FadeLoader';
+import DisConnectModal from './components/modal/disConnectModal';
 function App() {
   const {visibility,walletModalvisibility, metamaskModalVisibility, connectWalletModal, loading } = useModal();
   return (
     <>
+    <DisConnectModal/>
       {visibility && <MintNowModal/>}
       {walletModalvisibility && <WalletModal />}
       {metamaskModalVisibility && <MetamaskModal/> }

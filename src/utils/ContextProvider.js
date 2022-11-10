@@ -7,6 +7,7 @@ import {
   disconnectWallet,
   getbalance
 } from "../config";
+import { totalMintCount } from "./mint-nft";
 
 const ContextProvider = ({ children }) => {
   const [visibility, setVisibility] = useState(false);
@@ -17,12 +18,20 @@ const ContextProvider = ({ children }) => {
   const [connectWalletModal, setConnectWalletModal] = useState(false);
   const [account, setAccount] = useState("");
   const [loading, setloading] = useState(false);
+  const [showDisConnectModal,setDisConnectModal] = useState(false);
+  const [remaining, setRemaining] = useState(0);
 
   window.ethereum.on('accountsChanged',async function (accounts) {
     setAccount(accounts);
     const b = await getbalance(accounts[0]);
     setBalance(Number(b).toFixed(3));
   })
+
+  const calculateRemainingItems = async () => {
+    let totaltMintedItems = await totalMintCount();
+    console.log(parseInt(totaltMintedItems._hex,16));
+    setRemaining(parseInt(totaltMintedItems._hex,16));
+  };
 
   const loader = () => {
     setloading(!loading)
@@ -76,6 +85,10 @@ const ContextProvider = ({ children }) => {
   return (
     <ModalContext.Provider
       value={{
+        remaining,
+        calculateRemainingItems,
+        showDisConnectModal,
+        setDisConnectModal,
         visibility,
         setVisibility,
         mintModalHandle,

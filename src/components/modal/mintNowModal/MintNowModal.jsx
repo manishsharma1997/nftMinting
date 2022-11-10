@@ -24,7 +24,7 @@ const MintNowModal = () => {
   const [remaining, setRemaining] = useState(0);
   // const { mintModalHandle } = useModal();
   // const [loader,setLoader]=useState(false);
-  const {mintModalHandle, loader, setloading} = useModal();
+  const {mintModalHandle, loader, setloading,calculateRemainingItems} = useModal();
   console.log("HELLO ", setloading);
 
   let totalItems = 30;
@@ -76,6 +76,7 @@ const MintNowModal = () => {
       let txn = await mint(count,setloading);
       console.log(txn,"txn");
         setloading(false);
+        calculateRemainingItems();
            if(txn){
         toast.success('Minted Successfully', {
           position: "top-right",
