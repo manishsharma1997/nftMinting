@@ -5,13 +5,12 @@ import Button from "../../Button/Button1";
 import MintModalStyleWrapper from "./MintNow.styel";
 import mintImg from "../../../assets/images/icon/mint-img.png";
 // import hoverShape from "../../../assets/images/icon/hov_shape_L.svg";
-import { totalMintCount, mint } from '../../../utils/mint-nft';
+import { totalMintCount, mint ,getTransactionCost, getMaxSupply} from '../../../utils/mint-nft';
 import { useEffect } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Spinner from 'react-bootstrap/Spinner';
 // import SweetAlert from 'sweetalert-react';
-
 
 
 const MintNowModal = () => {
@@ -22,54 +21,80 @@ const MintNowModal = () => {
   const [count, setCount] = useState(1);
   const [message, setMessage] = useState('');
   const [remaining, setRemaining] = useState(0);
+  const [Price,setPrice] = useState(0);
+  const [total,setTotal] = useState(0);
   // const { mintModalHandle } = useModal();
   // const [loader,setLoader]=useState(false);
   const {mintModalHandle, loader, setloading,calculateRemainingItems} = useModal();
   console.log("HELLO ", setloading);
 
-  let totalItems = 30;
-  let price = 0.03;
+  const data = async () => {
+    try {
+      const res = await getMaxSupply();
+      // let total = (res.data.pin_count-1)/2;
+      setTotal(parseInt(res._hex, 16));
+      //  console.log((res.data),"axios"); 
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
+  let totalItems = total;
+  let price = Price;
 
   const increaseCount = () => {
-    if(count >= 10){
-      setMessage('Maximum minting ammount exceeding!');
+    let next = parseInt(count) + 1;
+    if(next > 10){
+      setMessage('Maximum minting ammount is 10');
     }else{
-      setCount(count + 1);
+      setCount(next);
+      setMessage('');
     }
   }
 
   const dcreaseCount = () => {
-    if(count < 1){
+    let prev = (parseInt(count) - 1);
+    if(prev < 1){
       setMessage('Minimum minting ammount 1.');
     }else{
       setMessage('')
-
-      setCount(count - 1);
+      setCount(prev);
     }
   }
 
-  const onChnageCount = (val) => {
-    console.log(message);
-    if(count >= 10){
-      setMessage('Maximum minting ammount exceeding!');
-    }
-    else if(count<10 || count>0){
-      setMessage('')
-    }
+  const onChangeCount = (e) => {
+    if (e.target.value == "") {
+      setCount(e.target.value);
+      setMessage("Minting amount required");
+    }else if(isNaN(parseInt(e.target.value))){
 
-    else if(count < 1){
-      setMessage('Minimum minting ammount 1.');
-    }else{
-      setCount(val);
     }
-  }
+     else if (e.target.value > 10) {
+      setMessage("Maximum minting amount is 10");
+    } else if (e.target.value < 1) {
+      setMessage("Minimum minting amount 1.");
+    } else{
+      setMessage("");
+      setCount(parseInt(e.target.value));
+    } 
+  };
+   
+  const Cost = async () => {
+     let Cprice = await getTransactionCost();
+     setPrice(Cprice);
+   }
 
+
+
+ 
 
   const mintNow = async () => {
     // setLoader(true)
    try {
     if(count >= 10){
-      setMessage('Maximum minting ammount exceeding!');
+      setMessage('Maximum minting ammount is 10');
     }else if(count < 1){
       setMessage('Minimum minting ammount 1.');
     } else{
@@ -98,12 +123,17 @@ const MintNowModal = () => {
   }
 
   useEffect(() => {
+    data();
+  },[]);
+
+  useEffect(() => {
     const calculateRemainingItems = async () => {
       let totaltMintedItems = await totalMintCount();
       setRemaining(totalItems - totaltMintedItems);
     }
 console.log('554');
     calculateRemainingItems();
+    Cost();
   },[totalItems,remaining]);
 
   return (
@@ -130,20 +160,18 @@ console.log('554');
                   <li>
                     <h5>Remaining</h5>
                     <h5>
-                      {remaining}/<span>30</span>
+                      {remaining}/<span>{total}</span>
                     </h5>
                   </li>
                   <li>
                     <h5>Price</h5>
-                    <h5>{price} ETH</h5>
+                    <h5>{Price}</h5>
                   </li>
                   <li>
                     <h5>Quantity</h5>
                     <div className="mint_quantity_sect">
                       <button
-                        onClick={() =>
-                          count > 1 ? dcreaseCount() : count
-                        }
+                        onClick={dcreaseCount}
                       >
                         -
                       </button>
@@ -151,19 +179,19 @@ console.log('554');
                         type="text"
                         id="quantity"
                         value={count}
-                        onChange={(e) => onChnageCount(e.target.value)}
+                        onChange={onChangeCount}
                       />
-                      <button onClick={() => increaseCount() }>+</button>
+                      <button onClick={increaseCount}>+</button>
                     </div>
                     <h5>
-                      <span>{ count * price }</span> ETH
+                      <span>{ count * price }</span>
                     </h5>
                   </li>
                 </ul>
               </div>
               { message && <p style={{color:'yellow'}}>{message}</p>}
               <div className="modal_mint_btn">
-                <Button lg variant="mint" onClick={() => { mintNow(); mintModalHandle(); loader(); }} style={{backgroundColor:'yellow'}}>
+                <Button lg variant="mint" onClick={() => {mintNow(); mintModalHandle(); loader(); }} style={{backgroundColor:'yellow'}}>
                   Mint Now
                 </Button>
               </div>

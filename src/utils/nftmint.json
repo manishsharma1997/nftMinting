@@ -15,6 +15,11 @@
 				"internalType": "string",
 				"name": "_initBaseURI",
 				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_maxsupply",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "nonpayable",

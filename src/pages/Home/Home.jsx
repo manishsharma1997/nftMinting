@@ -1,7 +1,7 @@
 import React from 'react'
 import {useModal} from "../../utils/ModalContext";
 import { useEffect,useState } from 'react';
-import { totalMintCount } from '../../utils/mint-nft';
+import { totalMintCount,setNftCost, getMaxSupply} from '../../utils/mint-nft';
 import './home.css'
 import homeimage from '../../assets/HomeImages/NFT Mint/homeimage.png'
 import lock from '../../assets/HomeImages/NFT Mint/Lock Copy@2x.png'
@@ -15,9 +15,26 @@ const Home = () => {
         // const { mintModalHandle, connectWalletModalHanlde, account} = useModal();
         const {mintModalHandle,account,remaining,calculateRemainingItems} = useModal();
 //   const [loader,setLoader]=useState(false);
+const [total,setTotal] = useState(0);
+
+const data = async () => {
+        try {
+          const res = await getMaxSupply();
+          // let total = (res.data.pin_count-1)/2;
+          setTotal(parseInt(res._hex, 16));
+          //  console.log((res.data),"axios"); 
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      useEffect(() => {
+        data();
+      },[]);
 
      useEffect(() => {
         calculateRemainingItems();
+       
      },[]);
 const mintNowHandler = (s)=>{
         if(account){
@@ -55,7 +72,7 @@ const mintNowHandler = (s)=>{
                                                         <p className='firstp'> CRAZY META 🎯 NFT COLLECTIONS
 
                                                         </p>
-                                                        <p className='p2'>{remaining} / 30 MINTED
+                                                        <p className='p2'>{remaining} / {total} MINTED
 
                                                         </p>
                                                         <div className='d-flex mt-5'>

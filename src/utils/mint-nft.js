@@ -1,68 +1,111 @@
-import contract from '../utils/nftmint.json';
-import { ethers } from 'ethers';
-import { isMetaMaskInstalled, ethereum } from '../config';
-import {  toast } from 'react-toastify';
+import contract from "../utils/nftmint.json";
+import { ethers } from "ethers";
+import { isMetaMaskInstalled, ethereum } from "../config";
+import { toast } from "react-toastify";
 
-
-export const mint = async (mint_amount,setloading) => {
-    try{
-    if(isMetaMaskInstalled()){
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const contractAddress = "0xF961A85858575D74350AcFEc0c6531DFE1375D37";
-        const nftContract = new ethers.Contract(contractAddress, contract, signer);
-        let txnHash = await nftContract.mint(ethereum.selectedAddress, mint_amount, {
-            gasLimit: "285000",
-            value: ethers.utils.parseEther((0.03 * mint_amount).toString())
-        })
-        toast.info('Minting in Process...', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            });
-            setloading(false);
-  
-      
-     
-      console.log(txnHash.hash,"Hash");
-      const txReceipt = await provider.waitForTransaction(
-        `${txnHash.hash}`,
-        1,
-        300000
+export const mint = async (mint_amount, setloading) => {
+  try {
+    if (isMetaMaskInstalled()) {
+      const provider = new ethers.providers.Web3Provider(ethereum);
+      const signer = provider.getSigner();
+      const contractAddress = "0x1dcb1b352Cb33005adb22400aD912De7BEcC8b2A";
+      const nftContract = new ethers.Contract(
+        contractAddress,
+        contract,
+        signer
       );
-      if (txReceipt && txReceipt.blockNumber) {
-        console.log(txReceipt,"receipt");
-        return txReceipt;
-      }
-    }
-}
-catch(err){
-    toast.error('Transaction Rejected', {
+      let txnHash = await nftContract.mint(
+        ethereum.selectedAddress,
+        mint_amount,
+        {
+          gasLimit: "3000000",
+          value: ethers.utils.parseEther((0.03 * mint_amount).toString()),
+        }
+      );
+
+      toast.info("Minting in Process...", {
         position: "top-right",
-        autoClose: 4000,
+        autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
-}
-}
+      });
+      setloading(false);
+
+      console.log(txnHash.hash, "Hash");
+      const txReceipt = await provider.waitForTransaction(
+        `${txnHash.hash}`,
+        1,
+        300000
+      );
+      if (txReceipt && txReceipt.blockNumber) {
+        console.log(txReceipt, "receipt");
+        return txReceipt;
+      }
+    }
+  } catch (err) {
+    toast.error("Transaction Rejected", {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  }
+};
 
 export const totalMintCount = async () => {
-    if(isMetaMaskInstalled()){
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const contractAddress = "0xF961A85858575D74350AcFEc0c6531DFE1375D37";
-        const nftContract = new ethers.Contract(contractAddress, contract, signer);
-        let totalMint = await nftContract.count();
-        console.log(totalMint,"totalMintCount");
-        return totalMint;
+  if (isMetaMaskInstalled()) {
+    const provider = new ethers.providers.Web3Provider(ethereum);
+    const signer = provider.getSigner();
+    const contractAddress = "0x1dcb1b352Cb33005adb22400aD912De7BEcC8b2A";
+    const nftContract = new ethers.Contract(contractAddress, contract, signer);
+    let totalMint = await nftContract.count();
+    console.log(totalMint, "totalMintCount");
+    return totalMint;
+  }
+};
+
+export const getTransactionCost = async (mint_amount) => {
+  try {
+    if (isMetaMaskInstalled()) {
+      const provider = new ethers.providers.Web3Provider(ethereum);
+      const signer = provider.getSigner();
+      const contractAddress = "0x1dcb1b352Cb33005adb22400aD912De7BEcC8b2A";
+      const nftContract = new ethers.Contract(
+        contractAddress,
+        contract,
+        signer
+      );
+      let getCost = await nftContract.cost();
+      let price = ethers.utils.formatEther(getCost);
+      return price;
     }
+  } catch (error) {
+    console.log(error, "Error");
+  }
+};
+
+export const getMaxSupply = async () => {
+  try {
+    if(isMetaMaskInstalled()) {
+      const provider = new ethers.providers.Web3Provider(ethereum);
+      const signer = provider.getSigner();
+      const contractAddress = "0x1dcb1b352Cb33005adb22400aD912De7BEcC8b2A";
+      const nftContract = new ethers.Contract(contractAddress, contract, signer);
+      let supply = await nftContract.maxSupply();
+      console.log(supply,"supply");
+      return supply
+    }
+  } catch (error) {
+    console.log(error,"supplyerror");
+  }
+ 
 }
+

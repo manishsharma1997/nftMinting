@@ -37,8 +37,14 @@ export const getbalance = async (address) =>{
 // disconnect metamask wallet
 export const disconnectWallet = () =>{
     localStorage.removeItem('isWalletConnected');
-    window.location.reload();
+    // ethereum.
+    window.location.reload(false);
 }
+
+// export const getTransactionCost = () =>{
+//     // localStorage.removeItem('isWalletConnected');
+//     // window.location.reload();
+// }
 
 // check metamask on disconnect
 export const onMetamaskDisconnect = () =>{
@@ -65,7 +71,6 @@ export const onChainChange = () =>{
 
 export const getChainId = async () =>{
     const chainId = await ethereum.request({ method: 'eth_chainId' });
-
     return parseInt(chainId);
 }
 
@@ -74,7 +79,6 @@ export const isWalletConnected = () => {
     if(localStorage.getItem('isWalletConnected') === 'true'){
         return true
     }
-
     return false;
 }
 

@@ -1,30 +1,50 @@
 import React from 'react'
 import { Modal } from 'react-bootstrap'
+import { toast } from 'react-toastify';
+import { FiCopy,FiLogOut } from 'react-icons/fi';
 import { useModal } from '../../../utils/ModalContext'
 function DisConnectModal() {
     const {
         showDisConnectModal,
         account,
+        nwk,
         balance,
         setDisConnectModal,
         disconnectWalletFromApp
     } = useModal();
     const substr = (str, n) =>{
         return str.length > n ? str.substr(0, n -1)+"..."+str.substr(38,43) : str;
-      }
+    }
+    const copyText = ()=>{ 
+        navigator.clipboard.writeText(account[0].toString());
+        toast.success('Text Copied Successfully!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
+    }
   
   return (
-    <Modal size='sm' centered show={showDisConnectModal} onHide={()=>setDisConnectModal(false)}>
-        <Modal.Body>
-            <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+    <Modal size='sm' centered show={showDisConnectModal}  onHide={()=>setDisConnectModal(false)}>
+        <Modal.Header style={{height:'0px',background:'#80808014',borderBottom:'#80808014'}} closeButton/>
+        <Modal.Body style={{background:'#80808014'}}>
+            <div style={{display:'flex',justifyContent:'center',alignItems:'center',color:'white'}}>
                 <div style={{backgroundColor:'yellowgreen',width:'50px',height:'50px',borderRadius:'50%'}}/>
             </div>
-            <div style={{textAlign:"center",marginTop:'5px',fontWeight:'700'}}>{substr(account.toString(),6)}</div>
+            <div style={{textAlign:"center",marginTop:'5px',letterSpacing:'1px',color:'black',fontFamily:'Kartooni'}}>{substr(account.toString(),6)}</div>
         </Modal.Body>
+        <div style={{backgroundColor:'#80808014'}} >
         <ul style={{display:'flex',listStyleType:'none',padding:'0px',margin:'10px'}}>
-            <li style={{width:'50%',textAlign:'center',backgroundColor:'whitesmoke',marginRight:'10px',padding:'10px'}}>Bal Avl: {balance}</li>
-            <li onClick={disconnectWalletFromApp} style={{width:'50%',textAlign:'center',backgroundColor:'whitesmoke',padding:'10px'}}>Disconnect</li>
+            {/* <li style={{fontFamily: 'Kartooni',width:'50%',textAlign:'center',backgroundColor:'#ffff',marginRight:'10px',padding:'10px',borderRadius:'6px'}}> {balance} {nwk}</li> */}
+            <li onClick={copyText} style={{fontFamily: 'Kartooni',width:'50%',textAlign:'center',backgroundColor:'#ffff',marginRight:'10px',padding:'10px',borderRadius:'6px',cursor:'pointer'}}><FiCopy/><br/>Copy Address</li>
+            <li onClick={disconnectWalletFromApp} style={{fontFamily: 'Kartooni',textAlign:'center',width:'50%',backgroundColor:'#ffff',padding:'10px',cursor:'pointer',borderRadius:'6px'}}><FiLogOut/><br/>Disconnect</li>
         </ul>
+        </div>
     </Modal>
   )
 }
