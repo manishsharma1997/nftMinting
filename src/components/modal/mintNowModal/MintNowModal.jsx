@@ -39,8 +39,6 @@ const MintNowModal = () => {
     }
   }
 
-
-
   let totalItems = total;
   let price = Price;
 
@@ -48,17 +46,23 @@ const MintNowModal = () => {
     let next = parseInt(count) + 1;
     if(next > 10){
       setMessage('Maximum minting ammount is 10');
-    }else{
+    }else if(isNaN(next)){
+      setCount(1);
+    }
+    else{
       setCount(next);
       setMessage('');
     }
   }
 
   const dcreaseCount = () => {
-    let prev = (parseInt(count) - 1);
+    let prev = count - 1;
     if(prev < 1){
       setMessage('Minimum minting ammount 1.');
-    }else{
+    }else if(isNaN(prev)){
+
+    }
+    else{
       setMessage('')
       setCount(prev);
     }
@@ -85,10 +89,6 @@ const MintNowModal = () => {
      let Cprice = await getTransactionCost();
      setPrice(Cprice);
    }
-
-
-
- 
 
   const mintNow = async () => {
     // setLoader(true)
@@ -183,8 +183,8 @@ console.log('554');
                       />
                       <button onClick={increaseCount}>+</button>
                     </div>
-                    <h5>
-                      <span>{ count * price }</span>
+                    <h5 style={{width:'50px'}}>
+                      <span>{ (count * price).toFixed(2) }</span>
                     </h5>
                   </li>
                 </ul>
