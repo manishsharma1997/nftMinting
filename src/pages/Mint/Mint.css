@@ -10,10 +10,13 @@
   }
 
   .mintsection{
-    background-image: url('../../assets/HomeImages/NFT Mint/Mask.png');
+    background-image: url('../../assets/HomeImages/NFT Mint/Pattern Copy@2x.png'),url('../../assets/HomeImages/NFT Mint/Mask.png');
     height: 100%;
+    background-position: left bottom, center;
+    background-repeat: no-repeat, repeat;
+    background-size: 48%, cover;
+    padding: 80px 0 150px;
   }
-
   .aftermint{
     display: flex;
     margin-top: 40px;
@@ -107,11 +110,11 @@
     margin-top: 10px;
     margin-right: 50px;
   }
-
+/* 
   .pattern_pic{
     height: 772.59px;
     width: 772.59px;
-  }
+  } */
   
   .section_about{
     display: flex;
@@ -140,12 +143,12 @@
   letter-spacing: 0.18px;
   line-height: 42px;
   }
-.pattern_pic{
-  background-image: url('../../assets/HomeImages/NFT Mint/Pattern Copy@2x.png');
-}
 
-.cards{
-  margin-left: -63px;
+.mint_cards{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .card1_pic{
@@ -177,21 +180,63 @@
   line-height: 17px;
 }
 
-  .card1{
+  /* .card1{
     height: 397.28px;
     width: 302.7px;
     box-shadow: 48.33px 48.33px 96.66px 0 #000000;
-  /* border: 1px solid red; */
   border-radius: 3%;
 margin-top: 187px;
 margin-left: 248px;
 margin-right: 221px;
-margin-bottom: 187px;}
+margin-bottom: 187px;
+} */
+.card_outer{
+  width: 100%;
+  position: relative;
+}
 .card123{
   position: absolute;
-  left: 359px;
-  margin-top: 84px;
+  top: 20%;
+  left: 30%;
 }
 .card1234{
   position: relative;
+}
+.time h4{
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  line-height: 20px;
+}
+.time h5{
+  color: #D5F70A;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.22px;
+  line-height: 28px;
+}
+.about_bandge{    
+  position: absolute;
+  top: 10%;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  height: 32.74px;
+  width: 73.13px;
+  border-radius: 109.14px;
+}
+.about_bandge img{
+  height: 15.55px;
+  width: 16.37px;
+}
+.about_bandge p{
+  color: #1D1D23;
+  font-size: 15.28px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  line-height: 20px;
+  margin: 0 0 0 5px;
 }

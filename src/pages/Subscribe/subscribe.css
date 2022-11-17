@@ -1,6 +1,6 @@
 .subscribesection{
     background-image: url('../../assets/HomeImages/NFT Mint/Mask.png');
-    padding-bottom: 20px;
+    padding: 60px 0;
 }
 .subscribe-text1{
     height: 154px;
@@ -21,9 +21,7 @@
   line-height: 36px;
   }
   .subscribe-text{
-    
-        height: 154px;
-        width: 1199px;
+    justify-content: space-between;
       display: flex;
   }
 .input-email{
@@ -47,23 +45,30 @@
   margin-left: 20px;
   font-size: larger;
   font-weight: 600;
-  padding: 20px 40px 20px 40px;
+  height: 90px;
+  width: 250px;
+  color: #191D23;
+  font-size: 30px;
   border-radius: 12px;
   background-color: #D5F70A;
 }
-.input{
+.subscribesection .input{
   width: 100%;
+  font-size: 30px;
   padding: 20px;
+  color: #fff;
+  font-family: kartooni;
   border-radius: 10px;
-  background-color: rgb(67, 67, 67);
+  background-color: #1B1B21;
+  border: none;
+  outline: none;
 }
 .input::placeholder{
   font-size: larger;
-  font-family: kartooni;
-  color: white;
+  color: #BDBDBD;
+  font-size: 30px;
 }
   .vector-image{
-    margin: 50px 210px;
-    height:'18px';
-    width:'700px';
+   padding: 60px 0;
+   text-align: center;
   }

@@ -25,6 +25,9 @@ function Subscribe() {
                     <input type='text' placeholder='Enter Your Email Address' className='input'/>
                     <button className='button'>Subscribe</button>
                     </div> 
+                    <div className='vector-image'>
+                            <img src={vectorImage}  height='18px' width='700px' alt='not found'/>
+                    </div>
                 </div>
             </div>
         </div>
