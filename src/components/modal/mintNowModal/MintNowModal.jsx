@@ -45,7 +45,7 @@ const MintNowModal = () => {
   const increaseCount = () => {
     let next = parseInt(count) + 1;
     if(next > 10){
-      setMessage('Maximum minting ammount is 10');
+      setMessage('Maximum minting amount is 10');
     }else if(isNaN(next)){
       setCount(1);
     }
@@ -58,7 +58,7 @@ const MintNowModal = () => {
   const dcreaseCount = () => {
     let prev = count - 1;
     if(prev < 1){
-      setMessage('Minimum minting ammount 1.');
+      setMessage('Minimum minting amount 1.');
     }else if(isNaN(prev)){
 
     }
@@ -94,9 +94,9 @@ const MintNowModal = () => {
     // setLoader(true)
    try {
     if(count >= 10){
-      setMessage('Maximum minting ammount is 10');
+      setMessage('Maximum minting amount is 10');
     }else if(count < 1){
-      setMessage('Minimum minting ammount 1.');
+      setMessage('Minimum minting amount 1.');
     } else{
       let txn = await mint(count,setloading);
       console.log(txn,"txn");

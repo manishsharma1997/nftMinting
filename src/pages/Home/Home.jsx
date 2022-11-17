@@ -150,7 +150,7 @@ const mintNowHandler = (s)=>{
                                                                 </p>
                                                         </div>
                                                         <div className='col-4'>
-                                                                <p className='lockp4'>We have an easy, fast, and certainly not complicated purchase transaction flow
+                                                                <p className='lockp4'>We have an easy, fast, and certainly not complicated purchase transaction flow.
 
                                                                 </p>
 

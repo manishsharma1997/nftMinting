@@ -32,7 +32,7 @@ function DisConnectModal() {
             {/* <div style={{display:'flex',justifyContent:'center',alignItems:'center',color:'white'}}>
                 <div style={{backgroundColor:'yellowgreen',width:'50px',height:'50px',borderRadius:'50%'}}/>
             </div> */}
-            <div style={{textAlign:"center",marginTop:'5px',letterSpacing:'1px',color:'black',fontFamily:'Kartooni'}}>{balance}</div>
+            <div style={{textAlign:"center",marginTop:'5px',letterSpacing:'1px',color:'black',fontFamily:'Kartooni'}}>{balance} {nwk}</div>
         </Modal.Body>
         <div style={{backgroundColor:'#80808014'}} >
         <ul style={{display:'flex',listStyleType:'none',padding:'0px',margin:'10px'}}>
