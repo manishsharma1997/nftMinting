@@ -9,3 +9,9 @@
   font-family: Kartooni;
   src: url('./assets/fonts/Kartooni.ttf');
 }
+.accordion-button:not(.collapsed),.accordion-button:focus{
+  color: #0B213E;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}

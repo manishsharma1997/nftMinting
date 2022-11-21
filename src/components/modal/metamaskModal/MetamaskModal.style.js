@@ -85,7 +85,7 @@ const MetamaskModalStyleWrapper = styled.div`
       top: 0px;
       overflow: hidden;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: baseline;
 
       svg {
