@@ -3,6 +3,7 @@ import Navbar from './components/navbar'
 import Home from "./pages/Home/Home"
 import Mint from '../src/pages/Mint'
 import Card from '../src/pages/Card';
+import Contact from '../src/pages/Contact/contact';
 import Subscribe from '../src/pages/Subscribe';
 import Roadmap from './pages/roadmap';
 import Footer from './components/footer';
@@ -14,6 +15,7 @@ import ConnectWallet from "./components/modal/metamask/ConnectWallet";
 import LoadingOverlay from 'react-loading-overlay';
 import FadeLoader from 'react-spinners/FadeLoader';
 import DisConnectModal from './components/modal/disConnectModal';
+import FAQs from './pages/FAQs';
 function App() {
   const {visibility,walletModalvisibility, metamaskModalVisibility, connectWalletModal, loading } = useModal();
   return (
@@ -30,7 +32,9 @@ function App() {
     <Mint/>
     <Card />
     <Roadmap/>
+    <Contact/>
     <Subscribe/>
+    <FAQs/>
     <Footer/>
     </>
   )

@@ -92,7 +92,7 @@ const MintModalStyleWrapper = styled.div`
       top: 14px;
       overflow: hidden;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: baseline;
    border-radius:13px
       svg {

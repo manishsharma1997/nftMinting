@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./Roadmap.module.css";
-import roadmap from '../../assets/HomeImages/NFT Mint/roadmap.png'
+import roadmap1 from '../../assets/HomeImages/NFT Mint/roadmap1.png'
+import roadmap2 from '../../assets/HomeImages/NFT Mint/roadmap2.png'
+import roadmap3 from '../../assets/HomeImages/NFT Mint/roadmap3.png'
 const Roadmap = () => {
 
   return (
@@ -15,7 +17,7 @@ const Roadmap = () => {
                 <div className={style.imagediv}>
                   <img
                     className={style.image1}
-                    src={roadmap}
+                    src={roadmap1}
                     alt=""
                   ></img>
                 </div>
@@ -32,7 +34,17 @@ const Roadmap = () => {
                       2021
                     </p>
                   </div>
-                  <p className={`pt-4 ${style.heading2paragraph}`}>Background reasearch and developments Team Allocation Presale Round 1 Launch Presale Round 1 Launch</p>
+                  <p className={`pt-4 ${style.heading2paragraph}`}>Background Research and Developments<br/>
+
+Team Allocation<br/>
+
+Presale Round 1 Launch<br/>
+
+Presale Round 2 Launch<br/>
+
+Security Audit (Certik Audit) <br/>
+
+IEO Launch (on a Global Exchange)</p>
                 </div>
               </div>
             </div>
@@ -51,7 +63,15 @@ const Roadmap = () => {
                             className={`pt-4 ${style.secondheading2paragraph}`}
                             content={item.content}
                           /> */}
-                  <p className={`pt-4 ${style.secondheading2paragraph}`}> Background reasearch and developments Team Allocation Presale Round 1 Launch Presale Round 1 Launch</p>
+                  <p className={`pt-4 ${style.secondheading2paragraph}`}> Major Exchange Listings<br/>
+
+Game of chance Beta release<br/>
+
+Games of skill Beta release<br/>
+
+Gaming platform release<br/>
+
+Online sport store</p>
                 </div>
               </div>
             </div>
@@ -62,7 +82,7 @@ const Roadmap = () => {
                 <div className={style.imagediv}>
                   <img
                     className={style.image1}
-                    src={roadmap}
+                    src={roadmap2}
                     // "/HomeAssests/roadmap1.png"
                     alt=""
                   ></img>
@@ -76,7 +96,7 @@ const Roadmap = () => {
                 <div className={style.imagediv}>
                   <img
                     className={style.image1}
-                    src={roadmap}
+                    src={roadmap3}
                     alt=""
                   ></img>
                 </div>
@@ -93,7 +113,7 @@ const Roadmap = () => {
                       2021
                     </p>
                   </div>
-                  <p className={`pt-4 ${style.heading2paragraph}`}>Background reasearch and developments Team Allocation Presale Round 1 Launch Presale Round 1 Launch</p>
+                  <p className={`pt-4 ${style.heading2paragraph}`}>Background reasearch and developments<br/> Team Allocation<br/> Presale Round 1 Launch<br/> Presale Round 1 Launch</p>
                 </div>
               </div>
             </div>

@@ -88,7 +88,7 @@ const MetamaskModalStyle = styled.div`
       top: 0px;
       overflow: hidden;
       display: flex;
-      justify-content: end;
+      justify-content: ;
       align-items: baseline;
 
       svg {
