@@ -1,7 +1,6 @@
 
 .how-to-mint {
     height: 75px;
-    width: 651px;
     color: #FFFFFF;
     font-family: MisterVampire;
     font-size: 49px;
@@ -15,11 +14,11 @@
     background-position: left bottom, center;
     background-repeat: no-repeat, repeat;
     background-size: 48%, cover;
-    padding: 80px 0 150px;
+    padding: 0 0 150px;
   }
   .aftermint{
     display: flex;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .connect_wallet{

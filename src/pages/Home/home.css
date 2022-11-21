@@ -82,23 +82,22 @@
     padding: 0 !important;
 }
 .section2{
-    padding-top: 50px;
     background-color: black;
-    padding-bottom: 50px;
+    padding: 70px 0;
 }
    .lockimg{
     width: 30px;
     height: 30px;
-    margin-top: 9px;
+    margin-top: 5px;
 }
 .lockp1{
-    padding-left: 26px;
     height: 42px;
     color: #F3F3F3;
+    margin: 0;
     font-family: Kartooni;
     font-size: 30px;
+    margin-left: 20px;
     letter-spacing: 0.3px;
-    padding-top: 10px;
 }
 .lockp2{
     height: 56px;
@@ -109,6 +108,7 @@
     letter-spacing: 0.2px;
     line-height: 28px;
     margin-left: -60px;
+    margin-bottom: 0;
 }
 
 .fast_transaction_div{
