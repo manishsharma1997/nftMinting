@@ -1,6 +1,5 @@
 
 .how-to-mint {
-    height: 75px;
     color: #FFFFFF;
     font-family: MisterVampire;
     font-size: 49px;
@@ -19,11 +18,15 @@
   .aftermint{
     display: flex;
     margin-top: 50px;
+    justify-content: space-between;
   }
 
   .connect_wallet{
     display: flex;
     color: white;
+  }
+  .connect_wallet:not(:last-child){
+    margin-right: 15px;
   }
   .one{
     height: 75px;
@@ -63,8 +66,7 @@
   }
 
   .connect_your_wallet{
-    height: 84px;
-    width: 202px;
+    max-width: 210px;
     color: #F3F3F3;
     font-family: Kartooni;
     font-size: 30px;
@@ -72,8 +74,7 @@
     line-height: 42px;
   }
   .select_your_quantity{
-    height: 84px;
-    width: 202px;
+    max-width: 210px;
     color: #F3F3F3;
     font-family: Kartooni;
     font-size: 30px;
@@ -81,8 +82,7 @@
     line-height: 42px;
   }
   .confirm-the-transaction{
-    height: 84px;
-    width: 202px;
+    max-width: 210px;
     color: #F3F3F3;
     font-family: Kartooni;
     font-size: 30px;
@@ -90,8 +90,7 @@
     line-height: 42px;
   }
   .receive_your_nfts{
-    height: 84px;
-    width: 202px;
+    max-width: 210px;
     color: #F3F3F3;
     font-family: Kartooni;
     font-size: 30px;
@@ -104,10 +103,10 @@
     justify-content: flex-start;
     margin-right: 20px;
   }
-
+.co
   .alphabets{
-    margin-top: 10px;
-    margin-right: 50px;
+    /* margin-top: 10px;
+    margin-right: 50px; */
   }
 /* 
   .pattern_pic{
@@ -116,16 +115,14 @@
   } */
   
   .section_about{
-    display: flex;
+    padding: 120px 0 0;
   }
 
-  .data_section{
+  /* .data_section{
     margin-top: 115px;
-  }
+  } */
 
   .about_us{
-  height: 75px;
-  width: 291px;
   color: #FFFFFF;
   font-family: MisterVampire;
   font-size: 49px;
@@ -134,8 +131,6 @@
   }
 
   .contrary_to_popular{
-  height: 504px;
-  width: 589px;
   color: #F3F3F3;
   font-family: Kartooni;
   font-size: 18px;
@@ -238,4 +233,46 @@ margin-bottom: 187px;
   letter-spacing: 0.15px;
   line-height: 20px;
   margin: 0 0 0 5px;
+}
+@media screen and (max-width: 1199.98px){
+  .connect_your_wallet,.confirm-the-transaction,.select_your_quantity{
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .one,.two,.three,.four{
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .about_card{
+    width: 16rem !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .aftermint{
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+  .aftermint .connect_wallet{
+    flex: 50%;
+  }
+  .connect_wallet:not(:last-child) {
+    margin-right: 0px;
+}
+.data_section{
+  margin-top: 100px;
+}
+}
+
+@media screen and (max-width: 576px){
+  .how-to-mint{
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .aftermint .connect_wallet{
+    flex: 100%;
+  }
+  .about_card{
+    width: 12rem !important;
+  }
 }

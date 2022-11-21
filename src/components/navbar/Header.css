@@ -1,6 +1,6 @@
 .section{
-    padding-top: 20px;
     position: fixed;
+    padding: 10px 0;
     width: 100%;
     background: rgb(9 11 12 / 99%);
     -webkit-backdrop-filter: blur(15px);
@@ -12,14 +12,16 @@
 }
 .navbar li{
     margin-right: 10px;
-    height: 20px;
     color: #ffff !important;
     font-family: "Kartooni";
     font-size: 16px;
     font-weight: bolder;
     letter-spacing: 0;
-    line-height: 22px;
     text-align: center;
+}
+.navbar-toggler-icon{
+    background-image: url(../../assets/HomeImages/NFT Mint/menu.png);
+    width: 1.8em;
 }
 .navbar-brand{
     color: #ffff !important;

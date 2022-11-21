@@ -10,7 +10,6 @@
     color: white;
 }
 .firstp{
-    height: 150px;
     width: 651px;
     color: #FFFFFF;
     font-family: MisterVampire;
@@ -19,17 +18,16 @@
     line-height: 75px;
 }
 .p2{
-    height: 36px;
     color: #D5F70A;
     font-family: Kartooni;
     font-size: 40px;
     letter-spacing: 0.4px;
-    line-height: 36px;
+    line-height: 45px;
     padding-top: 20px;
 }
 .mintbtn{
-    height: 58px;
-    width: 154px;
+    /* height: 58px; */
+    padding: 10px 20px;
     border-radius: 10px;
     background-color: #D5F70A;
     color: #1D1D23;
@@ -40,18 +38,18 @@
     text-align: center;
 }
 .p3{
-    height: 36px;
+    /* height: 36px; */
     color: #F3F3F3;
     font-family: Kartooni;
-    font-size: 24px;
     letter-spacing: 0.24px;
     line-height: 36px;
     justify-content: center;
     padding: 12px 0px 0px 40px;
+    font-size: 24px;
+    margin: 0;
 }
 .p4{
-    height: 84px;
-    width: 482px;
+    max-width: 482px;
     color: #FFFFFF;
     font-family: Kartooni;
     font-size: 18px;
@@ -62,21 +60,18 @@
     color: #D5F70A;
 }
 .bottom1{
-    height: 27px;
     color: #F3F3F3;
     font-family: Kartooni;
     font-size: 24px;
     letter-spacing: 0.3px;
-    padding: 0;
-    text-align: center;
+    margin: 0;
 }
 .bottom2{
-    height: 27px;
     color: #F3F3F3;
     font-family: Kartooni;
     font-size: 18px;
     letter-spacing: 0.3px;
-    padding-left: 30px;
+    margin: 0px;
 }
 .bottom2:nth-child(1){
     padding: 0 !important;
@@ -91,7 +86,7 @@
     margin-top: 5px;
 }
 .lockp1{
-    height: 42px;
+    width: 300px;
     color: #F3F3F3;
     margin: 0;
     font-family: Kartooni;
@@ -100,30 +95,28 @@
     letter-spacing: 0.3px;
 }
 .lockp2{
-    height: 56px;
-    width: 370px;
+    width: 390px;
+    margin-left: 50px;
     color: #BDBDBD;
     font-family: Kartooni;
     font-size: 20px;
     letter-spacing: 0.2px;
     line-height: 28px;
-    margin-left: -60px;
     margin-bottom: 0;
 }
 
 .fast_transaction_div{
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 
 .lockp4{
-    height: 56px;
-    width: 400px;
+    width: 390px;
+    margin-left: 50px;
     color: #BDBDBD;
     font-family: Kartooni;
     font-size: 20px;
     letter-spacing: 0.2px;
     line-height: 28px;
-    margin-left: 60px;
 }
 
 ._loading_overlay_content{
@@ -135,4 +128,60 @@
     left: 50%;
     width: 60px;
     height: 60px;
+}
+.banner-items div:not(:last-child){
+    margin-right: 20px;
+}
+@media screen and (max-width: 1199.98px) {   
+    .banner-items div:not(:last-child){
+        margin-right: 50px;
+    }
+    .firstp {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 992px){
+.banner-items div:not(:last-child) {
+    margin-right: 30px;
+}
+
+}
+@media screen and (max-width: 768px){
+    .firstp {
+        font-size: 35px;
+        line-height: 55px;
+    }
+    .bottom2{
+        font-size: 14px;
+    }
+    .banner-items{
+        gap: 20px 0;
+        flex-wrap: wrap;
+    }
+    .banner-items div{
+        margin-right: 0 !important;
+        flex: 50%;
+    }
+}
+@media screen and (max-width: 576px){
+    .firstp {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    
+.p2{
+    font-size: 24px;
+}
+.p3{
+    font-size: 18px;
+    padding: 0px 0px 0px 20px;
+}
+.mintbtn{
+    font-size: 18px;
+    padding: 5px 15px;
+}
+.p4{
+    font-size: 10px;
+    line-height: 22px;
+}
 }

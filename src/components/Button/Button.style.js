@@ -76,7 +76,7 @@ const ButtonWrapper = styled.button`
     sm &&
     css`
       width: 150px;
-      height: 50px;
+      height: 45px;
     `}
   ${({ lg }) =>
     lg &&

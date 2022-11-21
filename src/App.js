@@ -26,15 +26,15 @@ function App() {
       {metamaskModalVisibility && <MetamaskModal/> }
       {connectWalletModal && <ConnectWallet/> }
     <LoadingOverlay active={loading} spinner={<FadeLoader color={"#D5F70A"}/>}>
+    </LoadingOverlay>
     <Navbar/>
     <Home/>
-    </LoadingOverlay>
     <Mint/>
     <Card />
     <Roadmap/>
-    <FAQs/>
     <Contact/>
     {/* <Subscribe/> */}
+    <FAQs/>
     <Footer/>
     </>
   )

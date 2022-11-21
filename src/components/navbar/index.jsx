@@ -80,8 +80,6 @@ const Header = () => {
     <>
       <section className="section">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
               <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid">
                   <ul className="navbar-nav ">
@@ -108,7 +106,7 @@ const Header = () => {
                     className="collapse navbar-collapse"
                     id="navbarSupportedContent"
                   >
-                    <ul className="navbar-nav mb-4  ul">
+                    <ul className="navbar-nav align-items-center  ul">
                       <li className="nav-item">
                         <a
                           className="nav-link active"
@@ -201,8 +199,6 @@ const Header = () => {
                   </div>
                 </div>
               </nav>
-            </div>
-          </div>
         </div>
       </section>
       <Modal

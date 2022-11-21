@@ -3,7 +3,7 @@ import {useModal} from "../../utils/ModalContext";
 import { useEffect,useState } from 'react';
 import { totalMintCount,setNftCost, getMaxSupply} from '../../utils/mint-nft';
 import './home.css'
-import homeimage from '../../assets/HomeImages/NFT Mint/homeimage.png'
+import homeimage from '../../assets/HomeImages/NFT Mint/monstercutie3_01 [Converted] Copy@2x.png'
 import lock from '../../assets/HomeImages/NFT Mint/Lock Copy@2x.png'
 import Wallet from '../../assets/HomeImages/NFT Mint/Wallet Copy@2x.png'
 import vector from '../../assets/HomeImages/NFT Mint/Group 9 Copy.png'
@@ -68,14 +68,14 @@ const mintNowHandler = (s)=>{
                         <section className='homesection' id='home'>
                                 <div className='container'>
                                         <div className='row'>
-                                                <div className='col-lg-7'>
+                                                <div className='col-xl-7'>
                                                         <p className='firstp'> CRAZY META 🎯 NFT COLLECTIONS
 
                                                         </p>
                                                         <p className='p2'>{remaining} / {total} MINTED
 
                                                         </p>
-                                                        <div className='d-flex mt-5'>
+                                                        <div className='d-flex mt-3 mt-md-5'>
                                                         
                                                                 <button className='mintbtn' onClick={mintNowHandler}>Mint Now</button>
                                                                 <p className='p3'>Add to Wishlist
@@ -83,12 +83,12 @@ const mintNowHandler = (s)=>{
                                                                 </p>
                                                         </div>
                                                         <br />
-                                                        <p className='p4'>MAX 2 NFTS PER WALLET . PRICE 0.09 ETH + GAS
+                                                        <p className='p4'>MAX 2 NFTS PER WALLET . PRICE 0.09 ETH + GAS <br/>
                                                                 MINT IS LIVE<span className='spanp4'> UNTIL 25 APR 04:00H</span>
                                                                 <br />
                                                                 PRESALE : SOLDOUT</p>
-                                                        <div className='d-flex'>
-                                                                <div>
+                                                        <div className='d-flex mt-3 mt-md-5 banner-items'>
+                                                                <div className=''>
                                                                         <p className='bottom1'>5555</p>
                                                                         <p className='bottom2'>Total Items</p>
                                                                 </div>
@@ -109,9 +109,9 @@ const mintNowHandler = (s)=>{
                                                         </div>
 
                                                 </div>
-                                                <div className='col-lg-5'>
+                                                <div className='col-xl-5 align-self-end mt-5 mt-xl-0'>
 
-                                                        <img src={homeimage} alt=''></img>
+                                                        <img src={homeimage} alt='' className='img-fluid' width="614px"></img>
 
                                                 </div>
                                         </div>
@@ -121,42 +121,36 @@ const mintNowHandler = (s)=>{
                         <section className='section2'>
                                 <div className='container'>
                                         <div className='row'>
-                                                <div className='col-4'>
+                                                <div className='col-8'>
                                                         <div className='d-flex'>
                                                                 <img className='lockimg' src={lock} alt=''></img>
                                                                 <p className='lockp1'>Encrypted Security
 
                                                                 </p>
+                                                                <p className='lockp2'>Our platform has a strict security system that is safe from name theft.</p>
                                                         </div>
-                                                </div>
-                                                <div className='col-4'>
-                                                        <p className='lockp2'>Our platform has a strict security system that is safe from name theft.
-
-                                                        </p>
-
                                                 </div>
                                                 <div className='col-4'>
                                                         <img src={vector} alt=''></img>
                                                 </div>
-                                                <br />
-                                                <div className='d-flex fast_transaction_div' style={{ marginTop: '50px' }}>
-                                                        <div className='col-4'>
-                                                                <img src={vector} alt=''></img>
-                                                        </div>
-                                                        <div className='d-flex'>
-                                                                <img className='lockimg' src={Wallet} alt=''></img>
-                                                                <p className='lockp1'>Fast Transaction
+                                                <div className='col-12'>
+                                                        <div className='d-flex fast_transaction_div' style={{ marginTop: '50px' }}>
+                                                                <div className='col-4 text-end'>
+                                                                        <img src={vector} alt=''></img>
+                                                                </div>
+                                                                <div className='col-8'>
+                                                                        <div className='d-flex justify-content-end'>
+                                                                                <img className='lockimg' src={Wallet} alt=''></img>
+                                                                                <p className='lockp1'>Fast Transaction
 
-                                                                </p>
-                                                        </div>
-                                                        <div className='col-4'>
-                                                                <p className='lockp4'>We have an easy, fast, and certainly not complicated purchase transaction flow.
+                                                                                </p>
+                                                                        <p className='lockp4'>We have an easy, fast, and certainly not complicated purchase transaction flow.
 
-                                                                </p>
-
+                                                                        </p>
+                                                                        </div>
+                                                                </div>
                                                         </div>
                                                 </div>
-
                                         </div>
                                 </div>
 
