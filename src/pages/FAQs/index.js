@@ -43,7 +43,7 @@ const MOCK_DATA_ACCORDIAN = [
 
 export default function FAQs() {
   return (
-    <div id='contact' className={style.section}>
+    <div id='faq' className={style.section}>
       <div className="container">
         <div className={`row ${style.row}`}>
           <div className={`col-md-4 ${style.leftColumn}`}>

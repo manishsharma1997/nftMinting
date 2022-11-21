@@ -14,7 +14,7 @@ const Roadmap = () => {
 
             <div className={`col-lg-6 col-md-6 `}>
               <div className={style.leftcolumn}>
-                <div className={style.imagediv}>
+                <div className={`mt-5 ${style.imagediv}`}>
                   <img
                     className={style.image1}
                     src={roadmap1}

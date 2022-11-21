@@ -20,9 +20,12 @@
     justify-content: center;
   }
   .image1 {
-    width: 250px;
+    width: 320px;
+    height: auto;
   }
-  
+  .bordermobileview{
+    padding: 0 0 70px 0;
+  }
   .heading2div {
     display: flex;
     align-items: center;

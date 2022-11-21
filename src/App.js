@@ -32,9 +32,9 @@ function App() {
     <Mint/>
     <Card />
     <Roadmap/>
-    <Contact/>
-    <Subscribe/>
     <FAQs/>
+    <Contact/>
+    {/* <Subscribe/> */}
     <Footer/>
     </>
   )

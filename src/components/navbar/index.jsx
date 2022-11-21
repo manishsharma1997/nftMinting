@@ -140,25 +140,33 @@ const Header = () => {
                         <a
                           className="nav-link active"
                           aria-current="page"
+                          href="#faq">
+                          FAQ
+                        </a>
+                      </li>
+                      <li className="nav-item ">
+                        <a
+                          className="nav-link active"
+                          aria-current="page"
                           href="#contact">
                           Contact
                         </a>
                       </li>
 
-                      <li className="nav-item ">
+                      {/* <li className="nav-item ">
                         <a className="nav-link active"
                           aria-current="page"
                           href="#">
                           Search
                         </a>
-                      </li>
-                      <li className="nav-item ">
+                      </li> */}
+                      {/* <li className="nav-item ">
                         <a className="nav-link active"
                           aria-current="page"
                           onClick={handleShow}>
                           Settings
                         </a>
-                      </li>
+                      </li> */}
 
                       <li className="nav-item ">
                       { account ?
