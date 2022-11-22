@@ -10,9 +10,9 @@ const Roadmap = () => {
       <section className={style.section} id="roadmap">
         <div className="container">
           <p className={style.heading}>Roadmap</p>
-          <div className="row">
-
-            <div className={`col-lg-6 col-md-6 `}>
+          <div className="row ps-5 ps-lg-0">
+ 
+            <div className={`col-lg-6 d-none d-lg-block`}>
               <div className={style.leftcolumn}>
                 <div className={`mt-5 ${style.imagediv}`}>
                   <img
@@ -25,7 +25,7 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className={`col-lg-6 col-md-6  ${style.borderleftside}`}
+              className={`col-lg-6  ${style.borderleftside}`}
             >
               <div className={style.leftcolumn}>
                 <div>
@@ -50,7 +50,7 @@ IEO Launch (on a Global Exchange)</p>
             </div>
 
 
-            <div className={`col-lg-6 col-md-6 ${style.bordermobileview}`}>
+            <div className={`col-lg-6 ${style.bordermobileview}`}>
               <div className={style.secondrow}>
                 <div className={style.secondrowmarkup}>
                   <div className={` mt-5 ${style.heading2div}`}>
@@ -64,7 +64,7 @@ IEO Launch (on a Global Exchange)</p>
                             content={item.content}
                           /> */}
                   <p className={`pt-4 ${style.secondheading2paragraph}`}> Major Exchange Listings<br/>
-
+  
 Game of chance Beta release<br/>
 
 Games of skill Beta release<br/>
@@ -76,7 +76,7 @@ Online sport store</p>
               </div>
             </div>
             <div
-              className={`col-lg-6 col-md-6 pt-5  ${style.borderleftside2}`}
+              className={`col-lg-6 pt-5  d-none d-lg-block ${style.borderleftside2}`}
             >
               <div className={style.leftcolumn}>
                 <div className={style.imagediv}>
@@ -91,7 +91,7 @@ Online sport store</p>
               </div>
             </div>
 
-            <div className={`col-lg-6 col-md-6 `}>
+            <div className={`col-lg-6  d-none d-lg-block`}>
               <div className={style.leftcolumn}>
                 <div className={style.imagediv}>
                   <img
@@ -104,7 +104,7 @@ Online sport store</p>
               </div>
             </div>
             <div
-              className={`col-lg-6 col-md-6  ${style.borderleftside}`}
+              className={`col-lg-6  ${style.borderleftside}`}
             >
               <div className={style.leftcolumn}>
                 <div>

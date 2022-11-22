@@ -14,8 +14,8 @@ function Contact() {
       <div className="container">
       <h1 id="contact-title">Contact</h1>
       <div id="contact-container">
-        <div className="row">
-          <div className="col-6">
+        <div className="row gy-5 gy-lg-0">
+          <div className="col-lg-6">
             <form id="contact-form">
               <div id="name-container">
                 <input
@@ -48,7 +48,7 @@ function Contact() {
               <input id="submit-button" type="submit" value="Submit" />
             </form>
           </div>
-          <div className="col-6">
+          <div className="col-lg-6">
             <div id="traditional-contact">
               <h2>Contact me through:</h2>
               <a href="mailto:mail@example.com" id="contact-link">

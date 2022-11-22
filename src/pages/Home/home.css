@@ -144,7 +144,9 @@
 .banner-items div:not(:last-child) {
     margin-right: 30px;
 }
-
+.homesection {
+    padding-top: 150px;
+}
 }
 @media screen and (max-width: 768px){
     .firstp {
@@ -183,5 +185,8 @@
 .p4{
     font-size: 10px;
     line-height: 22px;
+}
+.homesection {
+    padding-top: 120px;
 }
 }

@@ -10,10 +10,10 @@
   .mintsection{
     background-image: url('../../assets/HomeImages/NFT Mint/Pattern Copy@2x.png'),url('../../assets/HomeImages/NFT Mint/Mask.png');
     height: 100%;
-    background-position: left bottom, center;
+    background-position: left 240px, center;
     background-repeat: no-repeat, repeat;
-    background-size: 48%, cover;
-    padding: 0 0 150px;
+    background-size: 50%, cover;
+    padding: 50px 0 0;
   }
   .aftermint{
     display: flex;
@@ -115,7 +115,7 @@
   } */
   
   .section_about{
-    padding: 120px 0 0;
+    padding: 120px 0 300px;
   }
 
   /* .data_section{
@@ -191,10 +191,12 @@ margin-bottom: 187px;
 .card123{
   position: absolute;
   top: 20%;
+  max-width: 352px;
   left: 30%;
 }
 .card1234{
   position: relative;
+  max-width: 352px;
 }
 .time h4{
   color: #FFFFFF;
@@ -246,6 +248,11 @@ margin-bottom: 187px;
   .about_card{
     width: 16rem !important;
   }
+  .mintsection{
+    background-image: url('../../assets/HomeImages/NFT Mint/Mask.png');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -256,14 +263,36 @@ margin-bottom: 187px;
   .aftermint .connect_wallet{
     flex: 50%;
   }
+  .card_btn{
+    padding: 10px 10px !important;
+  }
   .connect_wallet:not(:last-child) {
     margin-right: 0px;
 }
 .data_section{
   margin-top: 100px;
 }
+.about_us{
+  text-align: center;
 }
-
+.mintsection{
+  padding: 80px 0 0;
+}
+.card1234{
+  margin: auto;
+}
+.card123{
+  left: 45%;
+}
+.section_about {
+  padding: 80px 0 0;
+}
+}
+@media screen and (max-width: 768px){
+  .card123{
+    left: 40%;
+  }
+}
 @media screen and (max-width: 576px){
   .how-to-mint{
     font-size: 35px;
@@ -274,5 +303,31 @@ margin-bottom: 187px;
   }
   .about_card{
     width: 12rem !important;
+  }
+  .about_us{
+    font-size: 35px ;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .contrary_to_popular{
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .card_btn {
+    padding: 8px 5px !important;
+    font-size: 12px;
+}
+  .time h5{
+    font-size: 16px;
+  }
+  .time h4{
+    font-size: 14px;
+    margin: 0;
+  }
+  .time img{
+    width: 15px;
+  }
+  .time span{
+    font-size: 12px;
   }
 }

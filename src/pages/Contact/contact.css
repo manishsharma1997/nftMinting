@@ -22,7 +22,6 @@
 
 #contact-title {
   text-align: left;
-  width: 80vw;
   color: #ffffff;
   font-family: "MisterVampire";
   font-size: 52px;
@@ -36,7 +35,6 @@
   justify-content: center;
   flex-direction: column;
 }
-
 #name-container {
   display: flex;
   flex-wrap: nowrap;
@@ -47,7 +45,7 @@ form input, form textarea{
   border: 0px;
   border-radius: 0.5em;
   border: 0.2em solid var(--transparent);
-  flex: 50%;
+  flex: 45%;
 }
 
 form input:focus, form textarea:focus{
@@ -78,7 +76,7 @@ form input:focus, form textarea:focus{
   margin: 0 1em 0 0;
   height: 100%;
   padding: 0 0 0 2rem;
-  border-left: 0.2em solid #D5F70A;
+  border-left: 0.2em solid #d4f70a42;
   text-align: left;
 }
 
@@ -130,22 +128,43 @@ hr {
 @media (hover: none) {
   #submit-button {
     background-color: var(--transparent);
-    color: var(--secondary-colour);
+    color: #D5F70A;
   }
   
   #contact-link{
-    border-bottom: 0.1em dashed var(--secondary-colour);
+    border-bottom: #D5F70A;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  #traditional-contact {
-    border-top: 0.2em solid var(--secondary-colour);
-    border-left: 0.2em solid var(--transparent);
+@media screen and (max-width: 991.98px) {
+  #traditional-contact{
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0;
+    border-top: 0.2em solid #d4f70a42;
+    border-left: none;
   }
+  .contact_section{
+    padding: 80px 0 0;
+  }
+#contact-title {
+  text-align: center;
 }
-
-
+hr{
+  margin: 15px auto;
+  width: 90%;
+}
+}
+@media screen and (max-width: 576px) {
+    #name-container {
+      flex-wrap: wrap;
+    }
+    #contact-title {
+      font-size: 35px;
+      line-height: 40px;
+      margin-bottom: 30px;
+    }
+}
 
 
 

@@ -46,7 +46,7 @@ export default function FAQs() {
     <div id='faq' className={style.section}>
       <div className="container">
         <div className={`row ${style.row}`}>
-          <div className={`col-md-4 ${style.leftColumn}`}>
+          <div className={`col-lg-4 mb-4 mt-lg-0 ${style.leftColumn}`}>
             <h1 className={style.leftHeading}>
               FAQs
             </h1>
@@ -54,9 +54,9 @@ export default function FAQs() {
               What people usually ask
             </p>
           </div>
-          <div className="col-md-8">
+          <div className="col-lg-8">
             <div className="accordion" id="accordionExample">
-              <div className="row">
+              <div className="row px-3 px-md-0">
                 {MOCK_DATA_ACCORDIAN.map((item, i) => (
                   <React.Fragment key={item.id}>
                     <div className={`col-md-12 col-sm-12 ${style.content}`}>

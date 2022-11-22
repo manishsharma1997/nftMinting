@@ -1,10 +1,9 @@
 .section {
-    padding-top: 70px;
+    padding-top: 80px;
     padding-bottom: 75px;
     background-color: black;
     /* background-image: url(../../../public/HomeAssests/roadmapbackground.png); */
     background-attachment: fixed;
-    min-height: 1200px;
   }
   .heading {
     color: #ffffff;
@@ -27,6 +26,7 @@
     padding: 0 0 70px 0;
   }
   .heading2div {
+    max-width: 226px;
     display: flex;
     align-items: center;
     padding-right: 10px;
@@ -37,11 +37,10 @@
   }
   .heading2 {
     font-family: Kartooni;
-    width: 226px;
     transform: scaleX(-1);
     color: white;
     font-weight: 400;
-    padding-right: 33px;
+    padding-left: 65px;
     letter-spacing: 3px;
     font-size: 20px;
     text-align: end;
@@ -49,7 +48,7 @@
   }
   
   .heading2paragraph {
-    width: 413px;
+    max-width: 413px;
     color: #ffffff;
     font-family: Kartooni;
     font-size: 16px;
@@ -66,8 +65,7 @@
   }
   
   .secondheading2paragraph {
-    height: 259px;
-    width: 318px;
+    max-width: 318px;
     color: #ffffff;
     font-family: Kartooni;
     font-size: 16px;
@@ -101,7 +99,7 @@
     font-size: 22px;
   }
   .rightheadingdiv {
-    width: 226px;
+    max-width: 226px;
     display: flex;
     align-items: center;
     height: 50px;
@@ -199,11 +197,12 @@
   /* @media (max-width: 1199.98px) {
   } */
   @media (max-width: 991.98px) {
-    .borderleftside{
-      padding-left: 55px;
+    .section{
+      padding-bottom: 0;
     }
-  }
-  @media (max-width: 767.98px) {
+    .borderleftside{
+      padding: 0 0 0 55px;
+    }
     .image1{
       display: none;
     }
@@ -215,38 +214,40 @@
   
     }
     .heading2paragraph {
-      width: 271px;
-      margin-right: 0px;
+      max-width: 100%;
     }
     .borderleftside2 {
       
       display: none;
     }
-    
-    /* .borderleftside2:after {
-    display: none;
-    } */
-  
+    .secondrowmarkup{
+      align-items: flex-start;
+      padding: 0;
+    }
+    .secondrow {
+      justify-content: start;
+    }
     .heading2div {
       margin-right: 0px;
       transform: none;
-      padding: 0 0 0 10px;
     }
     .heading2 {
       transform: none;
+      text-align: start;
+      padding: 0 25px 0 35px;
     }
     .secondheading2paragraph {
       text-align: left;
-    }
-    .heading2paragraph {
-      margin-right: 0px;
+      max-width: 100%;
     }
     .bordermobileview{
-      border-left: 9px solid #e3d454;
+      border-left: 9px solid #D5F70A;
       position: relative;
-      padding-left: 55px;   
+      padding: 0 0 0 55px;
     }
-  
+  .heading{
+    text-align: center;
+  }
     .bordermobileview:after {
       width: 45px;
       height: 45px;
@@ -266,7 +267,7 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      background-color: #c2be9f;
+      background-color: #9BB409;
       content: "";
       position: absolute;
       left: -35px;
@@ -279,38 +280,26 @@
     
   }
   @media (max-width: 575.98px) {
-    .section {
-      padding-left: 55px;
-    }
+  
     .secondrow {
       padding-left: 55px;
       justify-content: flex-start;
     }
     .secondheading2paragraph{
       margin-right: 0px;
-      text-align: initial;
-      
-    }
-    .heading2paragraph {
-      width: 271px;
-      /* background-image: url(../../../public/HomeAssests/roadmap2.png); */
-      z-index: 99999;
-    }
-    .thirdheading2paragraph {
-      width: 239px;
-    }
-    .rightheadingdiv {
-      width: 100%;
-    }
-   
-  
-   
-    .secondheading2paragraph li{
-      margin-right: 1px;
-      letter-spacing: 2px;
-    
+      font-size: 12px;      
+      line-height: 22px;
     }
     .bordermobileview{
       padding-left: 0px;
+    }
+    .heading2paragraph {
+      font-size: 12px;
+    line-height: 22px;
+    }
+    .heading{
+      font-size: 35px;
+      line-height: 40px;
+      margin-bottom: 50px;
     }
   }

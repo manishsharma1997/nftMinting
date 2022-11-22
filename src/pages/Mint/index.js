@@ -12,7 +12,7 @@ const mint = () => {
     return (
         <>
       
-            <section className="mintsection" id='about'>
+            <section className="mintsection">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -55,7 +55,7 @@ const mint = () => {
                     </div>
                 </div>
                 <div className='container'>
-                    <div className="section_about">
+                    <div className="section_about"  id='about'>
                         <div className='row'>
                         <div className='col-12 col-lg-6 pattern_pic'>
                             <div className="mint_cards">
@@ -73,7 +73,7 @@ const mint = () => {
                                    <div className='time'> 
                                    <div><h4 >Jordi#146</h4> <h5>32.97EATH</h5></div>
                                    <div>
-                                    <Button style={{background:'yellow',padding:'8px 18px',fontFamily:'Kartooni',color:'black'}} variant="primary">Book Now</Button>
+                                    <Button className='card_btn' style={{background:'yellow',padding:'8px 18px',fontFamily:'Kartooni',color:'black'}} variant="primary">Book Now</Button>
                                     </div>
                                     </div>
                                 </Card.Body>
@@ -93,7 +93,7 @@ const mint = () => {
                                    <div className='time'> 
                                    <div><h4 >Jordi#146</h4> <h5 >32.97EATH</h5></div>
                                    <div>
-                                    <Button style={{background:'yellow',padding:'10px 20px',fontFamily:'Kartooni',color:'black'}} variant="primary">Book Now</Button>
+                                    <Button className='card_btn' style={{background:'yellow',padding:'10px 20px',fontFamily:'Kartooni',color:'black'}} variant="primary">Book Now</Button>
                                     </div>
                                     </div>
                                 </Card.Body>
