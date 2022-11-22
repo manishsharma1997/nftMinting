@@ -83,7 +83,7 @@ const mintNowHandler = (s)=>{
                                                                 </p>
                                                         </div>
                                                         <br />
-                                                        <p className='p4'>MAX 2 NFTS PER WALLET . PRICE 0.09 ETH + GAS <br/>
+                                                        <p className='p4'>MAX 3 NFTS PER WALLET . PRICE 0.09 ETH + GAS <br/>
                                                                 MINT IS LIVE<span className='spanp4'> UNTIL 25 APR 04:00H</span>
                                                                 <br />
                                                                 PRESALE : SOLDOUT</p>
