@@ -70,7 +70,7 @@ const Home = () => {
             <div className="col-xl-7">
               <p className="firstp"> CRAZY META 🎯 NFT COLLECTIONS</p>
               <p className="p2">
-                {5} / {30} MINTED
+                {remaining} / {total} MINTED
               </p>
               <div className="d-flex mt-3 mt-md-5">
                 <button className="mintbtn" onClick={mintNowHandler}>
