@@ -3,7 +3,7 @@ import Navbar from './components/navbar'
 import Home from "./pages/Home/Home"
 import Mint from '../src/pages/Mint'
 import Card from '../src/pages/Card';
-import Contact from '../src/pages/Contact/contact';
+import Contact from '../src/pages/Contact/contact1';
 import Subscribe from '../src/pages/Subscribe';
 import Roadmap from './pages/roadmap';
 import Footer from './components/footer';

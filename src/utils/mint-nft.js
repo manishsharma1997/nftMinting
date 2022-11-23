@@ -40,7 +40,7 @@ export const mint = async (mint_amount, setloading) => {
         }
       );
 
-      toast.info("Minting in Process...", {
+      toast.info("Minting in Process. It will take some time", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
