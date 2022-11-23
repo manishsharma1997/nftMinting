@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "https://nft-minting-manishsharma1997.vercel.app",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
