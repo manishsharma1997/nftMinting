@@ -61,7 +61,7 @@ const mint = () => {
                             <div className="mint_cards">
                                 <div className="card_outer">
                                <div className='card123'>
-                                      <Card style={{ background: '#353535',width:'22rem', position:'relative' }} className='cards about_card'>
+                                      <Card className='cards about_card'>
                                       <div className="about_bandge" >
                                                 <img src={heartimg}/>
                                                 <p>100</p>
@@ -80,7 +80,7 @@ const mint = () => {
                             </Card>
                             </div>
                             <div className='card1234'>
-                                      <Card style={{ background: '#353535',width:'22rem', boxShadow: 'rgb(0 0 0) 70.33px 50.33px 90.66px 0px', position: 'relative'  }} className='cards about_card'>
+                                      <Card style={{ boxShadow: 'rgb(0 0 0) 70.33px 50.33px 90.66px 0px' }} className='cards about_card'>
                                             <div className="about_bandge" >
                                                 <img src={heartimg}/>
                                                 <p>100</p>

@@ -76,7 +76,7 @@ Online sport store</p>
               </div>
             </div>
             <div
-              className={`col-lg-6 pt-5  d-none d-lg-block ${style.borderleftside2}`}
+              className={`col-lg-6 px-5  d-none d-lg-block ${style.borderleftside2}`}
             >
               <div className={style.leftcolumn}>
                 <div className={style.imagediv}>

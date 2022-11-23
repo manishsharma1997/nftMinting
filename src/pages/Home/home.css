@@ -26,7 +26,7 @@
     padding-top: 20px;
 }
 .mintbtn{
-    /* height: 58px; */
+    border: none;
     padding: 10px 20px;
     border-radius: 10px;
     background-color: #D5F70A;
@@ -49,12 +49,12 @@
     margin: 0;
 }
 .p4{
-    max-width: 482px;
+    max-width: 500px;
     color: #FFFFFF;
     font-family: Kartooni;
     font-size: 18px;
     letter-spacing: 1px;
-    line-height: 28px;
+    line-height: 35px;
 }
 .spanp4{
     color: #D5F70A;
@@ -86,7 +86,7 @@
     margin-top: 5px;
 }
 .lockp1{
-    width: 300px;
+    /* width: 300px; */
     color: #F3F3F3;
     margin: 0;
     font-family: Kartooni;
@@ -95,8 +95,8 @@
     letter-spacing: 0.3px;
 }
 .lockp2{
-    width: 390px;
-    margin-left: 50px;
+    /* width: 390px;
+    margin-left: 50px; */
     color: #BDBDBD;
     font-family: Kartooni;
     font-size: 20px;
@@ -110,8 +110,8 @@
 }
 
 .lockp4{
-    width: 390px;
-    margin-left: 50px;
+    /* width: 390px;
+    margin-left: 50px; */
     color: #BDBDBD;
     font-family: Kartooni;
     font-size: 20px;
@@ -139,6 +139,10 @@
     .firstp {
         width: 100%;
     }
+    .lockp1{
+        font-size: 26px;
+    }
+    
 }
 @media screen and (max-width: 992px){
 .banner-items div:not(:last-child) {
@@ -146,6 +150,10 @@
 }
 .homesection {
     padding-top: 150px;
+}
+.section2 {
+    background-color: black;
+    padding: 70px 0 0;
 }
 }
 @media screen and (max-width: 768px){
@@ -163,6 +171,14 @@
     .banner-items div{
         margin-right: 0 !important;
         flex: 50%;
+    }
+    .lockp1 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .lockp2 {
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 @media screen and (max-width: 576px){
@@ -188,5 +204,14 @@
 }
 .homesection {
     padding-top: 120px;
+}
+.lockp1 {
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 20px;
+}
+.lockimg {
+    width: 20px;
+    height: 20px;
 }
 }

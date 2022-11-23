@@ -64,7 +64,7 @@ function Contact() {
       <h1 id="contact-title">Contact</h1>
       <div id="contact-container">
         <div className="row gy-5 gy-lg-0">
-          <div className="col-lg-6">
+          <div className="col-lg-8">
             <form id="contact-form" onSubmit={handleOnSubmit}>
               <div id="name-container">
                 <input
@@ -100,12 +100,12 @@ function Contact() {
                 required
               ></textarea>
 
-              <ReCAPTCHA className="cap" sitekey="6LeBUiYjAAAAAPqB09Wm5copcQvPyzleUHkoN7gw" />
+              <ReCAPTCHA className="cap my-3" sitekey="6LeBUiYjAAAAAPqB09Wm5copcQvPyzleUHkoN7gw" />
 
               <input id="submit-button" type="submit" value="Submit" />
             </form>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-4">
             <div id="traditional-contact">
               <h2>Contact me through:</h2>
               <a href="mailto:mail@example.com" id="contact-link">

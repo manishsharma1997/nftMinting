@@ -4,13 +4,14 @@
     min-height: 800px;
     background-repeat: no-repeat;
     background-color: rgb(23, 23, 23);
-    padding:  80px 0 160px;
+    padding:  80px 0 190px;
 }
 .cards3{
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
 }
+
 .card_section .time h4{
     font-size: 20px;
     line-height: 25px;
@@ -43,7 +44,9 @@
   font-family: MisterVampire;
   font-size: 48px;
   letter-spacing: 0.48px;
-  line-height: 84px
+  line-height: 84px;
+  max-width: 920px;
+  margin-bottom: 70px;
 }
 .cards{
     border-radius: 15px;
