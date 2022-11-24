@@ -12,6 +12,7 @@ import {
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 function Contact() {
   const SERVICE_ID = "service_f77heti";
@@ -19,7 +20,7 @@ function Contact() {
   const USER_ID = "pZCibbDYFnuFsq-iT";
   const Ref = useRef();
   const cpRef = useRef();
-  const [msg,setMsg] = useState('');
+  // const [msg,setMsg] = useState('');
   
   const formik = useFormik({
     initialValues: {
@@ -37,7 +38,6 @@ function Contact() {
     onSubmit: (values) => {
       console.log(values);
       if (cpRef.current.getValue()){
-        setMsg('')
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, Ref.current, USER_ID).then(
           (result) => {
             console.log(result.text);
@@ -59,9 +59,11 @@ function Contact() {
         );
       }
       else if(!cpRef.current.getValue()){
-        setMsg(("Plz verify you are human!"))
+        toast.error("Plz verify you are human!",{
+          position:'top-center',
+          theme:'colored'
+        });
       }
-  
     },
   });
 
@@ -132,7 +134,6 @@ function Contact() {
                   sitekey="6LcXOy4jAAAAAHz2PxEBbL91suKKUz5KoZlJdQ_z"
                   type="image"
                 />
-                  <p className="error">{msg}</p>
                 <input id="submit-button" type="submit" value="Submit" />
               </form>
             </div>
