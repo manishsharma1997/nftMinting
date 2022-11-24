@@ -5,6 +5,9 @@
   --semi-transparent: rgba(0, 0, 0, 0.8);
   --secondary-colour: #26b79f;
 }
+.error{
+  color: red;
+}
 .contact_section {
   font-family: "kartooni", sans-serif;
   background-color: #000000;
@@ -72,7 +75,9 @@ form input:focus, form textarea:focus{
   font-size: 20px;
   border: 0.1em solid #D5F70A;
 }
-
+.name{
+  width: 95%;
+}
 #traditional-contact {
   margin: 0 1em 0 0;
   height: 100%;
