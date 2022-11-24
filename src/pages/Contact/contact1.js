@@ -30,7 +30,7 @@ function Contact() {
       subject: "",
     },
     validationSchema: yup.object({
-      firstname: yup.string().required("*Firstname is required"),
+      firstname: yup.string().required(" *Firstname is required"),
       lastname: yup.string().required("*Lastname is required"),
       mail: yup.string().email().required("*Email is required"),
       subject: yup.string().required("*Message is required"),
@@ -59,9 +59,9 @@ function Contact() {
         );
       }
       else if(!cpRef.current.getValue()){
-        toast.error("Plz verify you are human!",{
+        toast.error("Please Verify you are a human!",{
           position:'top-center',
-          theme:'colored'
+          theme:'light'
         });
       }
     },
