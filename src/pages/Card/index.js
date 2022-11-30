@@ -56,10 +56,10 @@ function card() {
                         <div className="time">
                         <div>
                             <h4 style={{ color: "white", fontFamily: "Kartooni" }}>
-                            Jordi#146
+                            Jourdi#146
                             </h4>{" "}
                             <h5 style={{ color: "yellow", fontFamily: "Kartooni" }}>
-                            32.97 EATH
+                            32.97 ETH
                             </h5>
                         </div>
                         <div>
