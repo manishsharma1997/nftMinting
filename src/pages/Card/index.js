@@ -47,7 +47,8 @@ function card() {
                         <div>
                             <img src={eyeImage} />
                             <span style={{ color: "rgba(238,238,238,0.7)" }}>
-                            100
+                            {" "}
+                            500
                             </span>
                         </div>
                         </div>
@@ -70,6 +71,7 @@ function card() {
                                 height: "60px",
                                 fontFamily: "Kartooni",
                                 color: "black",
+                                fontSize: "22px"
                             }}
                             variant="primary"
                             >
@@ -97,14 +99,14 @@ function card() {
                             <img src={timeImage} />
                             <span style={{ color: "rgba(238,238,238,0.7)" }}>
                             {" "}
-                            11h : 03m : 01s
+                            15h : 05m : 09s
                             </span>
                         </div>
                         <div>
                             <img src={eyeImage} />
                             <span style={{ color: "rgba(238,238,238,0.7)" }}>
                             {" "}
-                            100
+                            250
                             </span>
                         </div>
                         </div>
@@ -112,10 +114,10 @@ function card() {
                         <div className="time">
                         <div>
                             <h4 style={{ color: "white", fontFamily: "Kartooni" }}>
-                            Jordi#146
+                            Aurelians
                             </h4>{" "}
                             <h5 style={{ color: "yellow", fontFamily: "Kartooni" }}>
-                            32.97 EATH
+                            30.20 ETH
                             </h5>
                         </div>
                         <div>
@@ -127,6 +129,7 @@ function card() {
                                 height: "60px",
                                 fontFamily: "Kartooni",
                                 color: "black",
+                                fontSize: "22px"
                             }}
                             variant="primary"
                             >
@@ -141,7 +144,7 @@ function card() {
                     <Card style={{ background: "#353535", maxWidth:"360px", margin: "auto", }} className="cards">
                     <div className="about_bandge">
                         <img src={heartimg} />
-                        <p>200</p>
+                        <p>230</p>
                     </div>
                     <Card.Img
                         style={{ padding: "22px" }}
@@ -154,25 +157,25 @@ function card() {
                             <img src={timeImage} />
                             <span style={{ color: "rgba(238,238,238,0.7)" }}>
                             {" "}
-                            11h : 03m : 01s
+                            14h : 01m : 10s
                             </span>
                         </div>
                         <div>
                             <img src={eyeImage} />
                             <span style={{ color: "rgba(238,238,238,0.7)" }}>
                             {" "}
-                            100
+                            300
                             </span>
                         </div>
                         </div>
                         <hr />
                         <div className="time">
                         <div>
-                            <h4 style={{ color: "white", fontFamily: "Kartooni" }}>
-                            Jordi#146
+                            <h4 style={{ color: "white", fontFamily: "Kartooni", height: "25px", width:"85px", fontSize:"19.24px",letterSpacing:"0.19px" }}>
+                            Casandra
                             </h4>{" "}
                             <h5 style={{ color: "yellow", fontFamily: "Kartooni" }}>
-                            32.97 EATH
+                            39.20 ETH
                             </h5>
                         </div>
                         <div>
@@ -184,6 +187,7 @@ function card() {
                                 height: "60px",
                                 fontFamily: "Kartooni",
                                 color: "black",
+                                fontSize: "22px"
                             }}
                             variant="primary"
                             >

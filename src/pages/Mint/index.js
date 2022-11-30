@@ -66,14 +66,14 @@ const mint = () => {
                                                 <img src={heartimg}/>
                                                 <p>100</p>
                                             </div>
-                                <Card.Img style={{padding:'33px'}} variant="top" src={card2} />
+                                <Card.Img style={{padding:'25px'}} variant="top" src={card2} />
                                 <Card.Body style={{marginTop:'-32px'}}>
-                                    <div className='time'><div><img src={timeImage}/><span style={{color:'white'}}>11h : 03m : 01s</span></div><div><img src={eyeImage}/><span style={{color:'white'}}>100</span></div></div>
+                                    <div className='time'><div><img src={timeImage}/><span style={{color:'white',marginRight:'5px'}}>{' '}11h : 03m : 01s</span></div><div><img src={eyeImage}/><span style={{color:'white'}}>{' '}500</span></div></div>
                                     <hr style={{color:'white'}}/>
                                    <div className='time'> 
-                                   <div><h4 >Jordi#146</h4> <h5>32.97EATH</h5></div>
+                                   <div><h4 >Muthadi</h4> <h5>30.20ETH</h5></div>
                                    <div>
-                                    <Button className='card_btn' style={{background:'yellow',padding:'8px 18px',fontFamily:'Kartooni',color:'black'}} variant="primary">Book Now</Button>
+                                    <Button className='card_btn' style={{background:'yellow',padding:'8px 18px',fontFamily:'Kartooni',color:'black'}} variant="primary">Buy Now</Button>
                                     </div>
                                     </div>
                                 </Card.Body>
@@ -83,17 +83,17 @@ const mint = () => {
                                       <Card style={{ boxShadow: 'rgb(0 0 0) 70.33px 50.33px 90.66px 0px' }} className='cards about_card'>
                                             <div className="about_bandge" >
                                                 <img src={heartimg}/>
-                                                <p>100</p>
+                                                <p>120</p>
                                             </div>
-                                <Card.Img style={{padding:'33px'}} variant="top" src={card1Image} />
+                                <Card.Img style={{padding:'25px'}} variant="top" src={card1Image} />
                                 
                                 <Card.Body style={{marginTop:'-32px'}}>
-                                    <div className='time'><div><img src={timeImage}/><span style={{color:'white'}}>11h : 03m : 01s</span></div><div><img src={eyeImage}/><span style={{color:'white'}}>100</span></div></div>
+                                    <div className='time'><div><img src={timeImage}/><span style={{color:'white'}}>{' '}11h : 03m : 01s</span></div><div><img src={eyeImage}/><span style={{color:'white'}}>{' '}400</span></div></div>
                                     <hr style={{color:'white'}}/>
                                    <div className='time'> 
-                                   <div><h4 >Jordi#146</h4> <h5 >32.97EATH</h5></div>
+                                   <div><h4 >Muthadi</h4> <h5 >34.97ETH</h5></div>
                                    <div>
-                                    <Button className='card_btn' style={{background:'yellow',padding:'10px 20px',fontFamily:'Kartooni',color:'black'}} variant="primary">Book Now</Button>
+                                    <Button className='card_btn' style={{background:'yellow',padding:'10px 20px',fontFamily:'Kartooni',color:'black'}} variant="primary">Buy Now</Button>
                                     </div>
                                     </div>
                                 </Card.Body>

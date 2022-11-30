@@ -5,7 +5,7 @@ import Button from "../../Button/Button1";
 import MintModalStyleWrapper from "./MintNow.styel";
 import mintImg from "../../../assets/images/icon/mint-img.png";
 // import hoverShape from "../../../assets/images/icon/hov_shape_L.svg";
-import { totalMintCount, mint ,getTransactionCost, getMaxSupply} from '../../../utils/mint-nft';
+import { totalMintCount, mint ,getTransactionCost, getMaxSupply,getwhiteListUser } from '../../../utils/mint-nft';
 import { useEffect } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,7 +25,7 @@ const MintNowModal = () => {
   const [total,setTotal] = useState(0);
   // const { mintModalHandle } = useModal();
   // const [loader,setLoader]=useState(false);
-  const {mintModalHandle, loader, setloading,calculateRemainingItems} = useModal();
+  const {mintModalHandle, loader, setloading,calculateRemainingItems,account} = useModal();
   console.log("HELLO ", setloading);
 
   const data = async () => {
@@ -98,6 +98,8 @@ const MintNowModal = () => {
     }else if(count < 1){
       setMessage('Minimum minting amount 1.');
     } else{
+      let user = await getwhiteListUser(`${account}`);
+      if(user){
       let txn = await mint(count,setloading);
       console.log(txn,"txn");
         setloading(false);
@@ -114,6 +116,19 @@ const MintNowModal = () => {
           theme: "dark",
           });
       }
+    }else{
+      setloading(false);
+          toast.error("Only Whitelisted User can Mint NFT's, Please Contact Admin", {
+            position: "top-right",
+            autoClose: 6000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+    }
     }
    } catch (error) {
     setloading(false);

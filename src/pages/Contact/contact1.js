@@ -32,7 +32,7 @@ function Contact() {
     validationSchema: yup.object({
       firstname: yup.string().required(" *Firstname is required"),
       lastname: yup.string().required("*Lastname is required"),
-      mail: yup.string().email().required("*Email is required"),
+      mail: yup.string().email("Please Enter a Valid Email  ").required("*Email is required"),
       subject: yup.string().required("*Message is required"),
     }),
     onSubmit: (values) => {
